@@ -6,6 +6,20 @@
 #include <sys/stat.h>
 #include <stdlib.h>
 
+void	print_output(int nsyms, int symoff, int stroff, char *ptr)
+{
+	int		i;
+	char	*stringtable;
+	struct nlist_64	*array;
+
+	array = (void *)ptr + symoff;
+	stringtable = (void *) ptr + stroff;
+	for (i = 0; i < nsyms; ++i)
+	{
+		printf("%s\n", stringtable + array[i].n_un.n_strx);
+	}
+}
+
 void	handle_64(char *ptr)
 {
 	int						ncmds;
@@ -22,7 +36,7 @@ void	handle_64(char *ptr)
 		if (lc->cmd == LC_SYMTAB)
 		{
 			sym = (struct symtab_command *) lc;
-			printf("nb symbols = %d\n", sym->nsyms);
+			print_output(sym->nsyms, sym->symoff, sym->stroff, ptr);
 			break;
 		}
 		lc = (void *)lc + lc->cmdsize;
