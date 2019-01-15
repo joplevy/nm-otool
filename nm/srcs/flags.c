@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 15:25:23 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/14 12:48:49 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/14 15:00:20 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int ft_get_args(int ac, char **av)
 		}
 		else
 			flags &= (~AOUT);
-		ft_putendl(*lav);
 		lav++;
 	}
 	return ((int)flags);

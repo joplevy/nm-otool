@@ -26,7 +26,7 @@ void	handle_64(char *ptr)
 	int						i;
 	struct mach_header_64	*header;
 	struct load_command		*lc;
-	struct symtab_command		*sym;
+	struct symtab_command	*sym;
 
 	header = (struct mach_header_64 *)ptr;
 	ncmds = header->ncmds;
