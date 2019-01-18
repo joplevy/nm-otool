@@ -6,7 +6,7 @@
 #    By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 13:21:18 by jplevy            #+#    #+#              #
-#    Updated: 2018/12/22 15:30:15 by opus1io          ###   ########.fr        #
+#    Updated: 2019/01/17 18:36:18 by opus1io          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ SRC_PATH = ./srcs/
 OBJ_PATH = ./dst/
 SRC_NAME = ft_nm.c \
 			errors.c \
-			flags.c
+			flags.c \
+			symbols.c \
+			sections.c \
+			main.c
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 INCLUDE_FILE = ./includes/ft_nm.h
