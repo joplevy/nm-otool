@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/01/14 17:06:15 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/16 12:53:46 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@ typedef enum	e_flags
 	ST_ORDER = 4,
 	AOUT = 8
 }				t_flags;
+
+typedef struct	s_syminfo{
+	char		letter;
+	char		*str;
+	uint8_t		ext;
+	uint64_t	value;
+}				t_syminfo;
 
 typedef struct	s_flag_funcs
 {
