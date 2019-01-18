@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 16:14:23 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/17 16:55:06 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/17 17:21:24 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ t_list	*ft_get_syminfos(struct nlist_64 symcmd, char *str, char *sect)
 	infos.ext = symcmd.n_type & N_EXT;
 	if (symcmd.n_type & N_SECT)
 	{
-		if (symcmd.n_sect > 0 && symcmd.n_sect <= ft_strlen(sect))
+		if (symcmd.n_sect > 0 && symcmd.n_sect <= ft_strlen(sect) + 1)
 			infos.letter = sect[symcmd.n_sect - 1];
 		else
-			infos.letter = 'S';
+			return (NULL);
 	}
 	if (!infos.letter)
 		infos.letter = 'U';
@@ -34,7 +34,7 @@ t_list	*ft_get_syminfos(struct nlist_64 symcmd, char *str, char *sect)
 	return (ret);
 }
 
-void	ft_get_symbols(struct symtab_command *sym, void *ptr, char *sect, size_t vmsize)
+void	ft_get_symbols(struct symtab_command *sym, void *ptr, char *sect)
 {
 	size_t			i;
 	char			*strtab;
@@ -47,12 +47,14 @@ void	ft_get_symbols(struct symtab_command *sym, void *ptr, char *sect, size_t vm
 	i = 0;
 	while (i < sym->nsyms)
 	{
-		res = ft_get_syminfos(symcmd[i], strtab + symcmd[i].n_un.n_strx, sect);
-		infos = res->content;
-		if (infos->value && infos->value < vmsize)
-			ft_printf("%016llx %c %s\n", infos->value, (infos->ext) ? infos->letter : infos->letter + 32, infos->str);
-		else if (!(infos->value))
-			ft_printf("                 %c %s\n", (infos->ext) ? infos->letter : infos->letter + 32, infos->str);
+		if ((res = ft_get_syminfos(symcmd[i], strtab + symcmd[i].n_un.n_strx, sect)))
+		{
+			infos = res->content;
+			if (infos->value && infos->value)
+				ft_printf("%016llx %c %s\n", infos->value, (infos->ext) ? infos->letter : infos->letter + 32, infos->str);
+			else if (!(infos->value))
+				ft_printf("                 %c %s\n", (infos->ext) ? infos->letter : infos->letter + 32, infos->str);
+		}
 		i++;
 	}
 }
@@ -68,22 +70,6 @@ size_t	ft_get_nb_sects(struct mach_header_64 *header, struct load_command *lc)
 	{
 		if (lc->cmd == LC_SEGMENT_64)
 			ret += ((struct segment_command_64 *)lc)->nsects;
-		lc = (void *) lc + lc->cmdsize;
-	}
-	return (ret);
-}
-
-size_t	ft_get_sects_size(struct mach_header_64 *header, struct load_command *lc)
-{
-	size_t	i;
-	size_t	ret;
-
-	i = 0;
-	ret = 0;
-	while (i++ < header->ncmds)
-	{
-		if (lc->cmd == LC_SEGMENT_64)
-			ret += ((struct segment_command_64 *)lc)->vmsize;
 		lc = (void *) lc + lc->cmdsize;
 	}
 	return (ret);
@@ -138,19 +124,17 @@ void	ft_handle_64(void *ptr, char *name)
 	struct symtab_command	*sym;
 	char					*sect;
 	size_t					i;
-	size_t					memsize;
 
 	header = (struct mach_header_64 *)ptr;
 	lc = (void *) ptr + sizeof(*header);
 	i = 0;
-	memsize = ft_get_sects_size(ptr, lc);
 	sect = ft_get_sections(ptr, lc);
 	while (i++ < header->ncmds && name)
 	{
 		if (lc->cmd == LC_SYMTAB)
 		{
 			sym = (struct symtab_command *) lc;
-			ft_get_symbols(sym, ptr, sect, memsize);
+			ft_get_symbols(sym, ptr, sect);
 			return ;
 		}
 		lc = (void *) lc + lc->cmdsize;
