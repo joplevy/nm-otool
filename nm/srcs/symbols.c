@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:16:56 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/17 18:25:26 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/18 13:48:16 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static t_list	*ft_get_symbols(struct symtab_command *sym, void *ptr, char *sect)
 	return (list);
 }
 
-t_list	*ft_handle_64(void *ptr)
+t_list			*ft_handle_64(void *ptr)
 {
 	struct mach_header_64	*header;
 	struct load_command		*lc;

@@ -6,13 +6,14 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:14:50 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/17 18:24:05 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/18 13:48:58 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_nm.h>
 
-static size_t	ft_get_nb_sects(struct mach_header_64 *header, struct load_command *lc)
+static size_t	ft_get_nb_sects(struct mach_header_64 *header, \
+	struct load_command *lc)
 {
 	size_t	i;
 	size_t	ret;
@@ -28,7 +29,7 @@ static size_t	ft_get_nb_sects(struct mach_header_64 *header, struct load_command
 	return (ret);
 }
 
-static char	get_section_letter(char *sectname)
+static char		get_section_letter(char *sectname)
 {
 	if (ft_strcmp(sectname, SECT_TEXT) == 0)
 		return ('T');
@@ -41,7 +42,8 @@ static char	get_section_letter(char *sectname)
 	return ('S');
 }
 
-char	*ft_get_sections(struct mach_header_64 *header, struct load_command *lc)
+char			*ft_get_sections(struct mach_header_64 *header, \
+	struct load_command *lc)
 {
 	char						*ret;
 	struct section_64			*section;

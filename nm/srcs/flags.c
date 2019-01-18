@@ -6,13 +6,13 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 15:25:23 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/17 17:57:07 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/18 11:32:39 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_nm.h>
 
-int ft_r_flag(t_flags *f)
+int			ft_r_flag(t_flags *f)
 {
 	*f ^= REVERSE;
 	if (*f & REVERSE)
@@ -21,7 +21,7 @@ int ft_r_flag(t_flags *f)
 		return (-1);
 }
 
-int ft_p_flag(t_flags *f)
+int			ft_p_flag(t_flags *f)
 {
 	*f ^= ST_ORDER;
 	if (*f & ST_ORDER)
@@ -30,7 +30,7 @@ int ft_p_flag(t_flags *f)
 		return (-1);
 }
 
-int ft_set_flag(char f, t_flags *flags)
+static int	ft_set_flag(char f, t_flags *flags)
 {
 	int i;
 
@@ -48,7 +48,7 @@ int ft_set_flag(char f, t_flags *flags)
 	return (-1);
 }
 
-int ft_get_args(int ac, char **av)
+int			ft_get_args(int ac, char **av)
 {
 	int lac;
 	char **lav;

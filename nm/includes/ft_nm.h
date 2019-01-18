@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/01/17 18:35:54 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/18 13:40:46 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,19 @@ typedef struct	s_flag_funcs
 } 				t_flag_funcs;
 
 /*
+**	merge_sort.c
+** static t_list	*ft_sorted_merge(t_list* a, t_list* b)
+** static void		ft_split_list(t_list* list, t_list** front, t_list** back)
+*/
+
+void	ft_sort_alpha(t_list **list);
+void	ft_reverse_list(t_list **list);
+
+/*
 **	main.c
 */
 
-void	ft_print_symbols(t_list *list);
+// void	ft_print_symbols(t_list *list, t_flags flags);
 
 /*
 **	symbols.c
@@ -76,7 +85,7 @@ char	*ft_get_sections(struct mach_header_64 *header, struct load_command *lc);
 **	ft_nm.c
 **
 ** static t_list	*ft_parse_binary(void *ptr);
-** static void		ft_process_file(char *file);
+** static void		ft_process_file(char *file, t_flags flags);
 ** static void		ft_handle_files(int ac, char **av);
 **
 */
@@ -85,11 +94,13 @@ void	ft_nm(int ac, char **av, t_flags flags);
 
 /*
 **	flags.c
+**
+** static int		ft_set_flag(char f, t_flags *flags);
+**
 */
 
 int		ft_r_flag(t_flags *f);
 int		ft_p_flag(t_flags *f);
-int		ft_set_flag(char f, t_flags *flags);
 int		ft_get_args(int ac, char **av);
 
 /*
