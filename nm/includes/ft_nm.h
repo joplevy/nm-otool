@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/01/18 13:40:46 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/01/18 17:12:45 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <fcntl.h>
 # include <sys/stat.h>
 # include <sys/mman.h>
+# include <stdbool.h>
 
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
@@ -24,13 +25,13 @@
 # define USAGE "usage: ft_nm [-options | binary file]\n"
 # define NB_FLAG 2
 # define NB_ERROR 3
-
 typedef enum	e_flags
 {
 	NONE = 0,
 	REVERSE = 1,
 	ST_ORDER = 2,
-	AOUT = 4
+	AOUT = 4,
+	MANY = 8
 }				t_flags;
 
 typedef struct	s_syminfo{
@@ -56,12 +57,6 @@ void	ft_sort_alpha(t_list **list);
 void	ft_reverse_list(t_list **list);
 
 /*
-**	main.c
-*/
-
-// void	ft_print_symbols(t_list *list, t_flags flags);
-
-/*
 **	symbols.c
 **
 ** static t_list	*ft_get_syminfos(struct nlist_64 symcmd, char *str, char *sect);
@@ -69,7 +64,7 @@ void	ft_reverse_list(t_list **list);
 **
 */
 
-t_list	*ft_handle_64(void *ptr);
+t_list	*ft_parse_binary(void *ptr, bool is_64);
 
 /*
 **	sections.c
@@ -79,7 +74,7 @@ t_list	*ft_handle_64(void *ptr);
 **
 */
 
-char	*ft_get_sections(struct mach_header_64 *header, struct load_command *lc);
+char	*ft_get_sections(struct mach_header *header, struct load_command *lc, bool is_64);
 
 /*
 **	ft_nm.c
