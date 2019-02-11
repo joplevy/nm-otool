@@ -6,16 +6,38 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:10:03 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/18 16:55:21 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/02/11 15:13:07 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_nm.h>
 
-static void		ft_print_symbols(t_list *list, t_flags flags, char *file)
+static void		ft_print_line(t_syminfo *infos, bool is_64)
+{
+	if (ft_strlen(infos->str) == 0)
+		return ;
+	if (is_64)
+	{
+		if (infos->letter != 'U')
+			ft_printf("%016llx %c %s\n", infos->value,
+				(infos->ext) ? infos->letter : infos->letter + 32, infos->str);
+		else
+			ft_printf("                 %c %s\n", (infos->ext) ? infos->letter
+				: infos->letter + 32, infos->str);
+		return ;
+	}
+	if (infos->letter != 'U')
+		ft_printf("%08lx %c %s\n", infos->value,
+			(infos->ext) ? infos->letter : infos->letter + 32, infos->str);
+	else
+		ft_printf("         %c %s\n", (infos->ext) ? infos->letter
+			: infos->letter + 32, infos->str);
+}
+
+static void		ft_print_symbols(t_list *list, t_flags flags, char *file, \
+	bool is_64)
 {
 	t_list		*tmp;
-	t_syminfo	*infos;
 
 	if (!(flags & ST_ORDER))
 	{
@@ -28,13 +50,7 @@ static void		ft_print_symbols(t_list *list, t_flags flags, char *file)
 	tmp = list;
 	while (tmp)
 	{
-		infos = tmp->content;
-		if (infos->letter != 'U')
-			ft_printf("%016llx %c %s\n", infos->value,
-				(infos->ext) ? infos->letter : infos->letter + 32, infos->str);
-		else
-			ft_printf("                 %c %s\n", (infos->ext) ? infos->letter
-				: infos->letter + 32, infos->str);
+		ft_print_line(tmp->content, is_64);
 		tmp = tmp->next;
 	}
 }
@@ -67,7 +83,7 @@ static void	ft_process_file(char *file, t_flags flags)
 		return;
 	if ((list = ft_magic_run(ptr)) == NULL)
 		ft_printf("./ft_nm: %s: The file was not recognized as a valid object file\n\n", file);
-	ft_print_symbols(list, flags, file);
+	ft_print_symbols(list, flags, file, (*(unsigned int *)ptr == MH_MAGIC_64) ? true : false);
 	munmap(ptr, buff.st_size);
 }
 

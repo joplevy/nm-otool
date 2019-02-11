@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:16:56 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/18 17:49:52 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/02/11 12:57:27 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static t_list	*ft_get_syminfos(struct nlist_64 symcmd, char *str, char *sect, \
 {
 	t_list		*ret;
 	t_syminfo	infos;
+
 	infos.letter = 0;
 	infos.value = (is_64) ? symcmd.n_value : (uint32_t)(symcmd.n_value);
 	infos.str = str;
@@ -34,7 +35,8 @@ static t_list	*ft_get_syminfos(struct nlist_64 symcmd, char *str, char *sect, \
 	return (ret);
 }
 
-static t_list	*ft_get_symbols(struct symtab_command *sym, void *ptr, char *sect, bool is_64)
+static t_list	*ft_get_symbols(struct symtab_command *sym, void *ptr, char *sect, \
+	bool is_64)
 {
 	size_t			i;
 	void			*symcmd;

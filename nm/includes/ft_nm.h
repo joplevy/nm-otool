@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/01/18 17:12:45 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/02/11 15:39:26 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define USAGE "usage: ft_nm [-options | binary file]\n"
 # define NB_FLAG 2
 # define NB_ERROR 3
+
 typedef enum	e_flags
 {
 	NONE = 0,
