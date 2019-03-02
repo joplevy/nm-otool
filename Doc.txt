@@ -1,2 +1,36 @@
 /usr/include/mach-o/loader.h
 /usr/include/mach-o/nlist.h
+                 U ___stderrp
+0000000100000000 T __mh_execute_header
+                 U _fprintf
+                 U _fstat$INODE64
+0000000100000cd0 T _handle_64
+0000000100000db0 T _main
+                 U _mmap
+                 U _munmap
+0000000100000d70 T _nm
+                 U _open
+                 U _perror
+0000000100000c40 T _print_output
+                 U _printf
+                 U dyld_stub_binder
+
+
+
+__mh_execute_header
+_handle_64
+_main
+_nm
+_print_output
+___stderrp
+_fprintf
+_fstat$INODE64
+_mmap
+_munmap
+_open
+_perror
+_printf
+dyld_stub_binder
+
+
+U (undefined), A (absolute), T (text section symbol), D (data section symbol), B (bss section symbol), C  (common  symbol),  -  (for  debugger symbol table entries; see -a below), S (symbol in a section other than those above), or I (indirect symbol).  If the symbol is local (non-external)
