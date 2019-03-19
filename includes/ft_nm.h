@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nm.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jplevy <jplevy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/02/11 17:31:57 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/03/18 14:22:46 by jplevy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
+# include <mach-o/fat.h>
+# include <ar.h>
 
 # define NB_FLAG 2
 # define NB_ERROR 3

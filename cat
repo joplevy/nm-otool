@@ -1,0 +1,290 @@
+#1/20           |
+__.SYMDEF
+2076      `
+__.SYMDEF
+#1/20           |
+ft_bzero.o
+700       `
+ft_bzero.o
+#1/20           |
+ft_memccpy.o
+788       `
+ft_memccpy.o
+#1/20           |
+ft_memcpy.o
+716       `
+ft_memcpy.o
+#1/20           |
+ft_memset.o
+700       `
+ft_memset.o
+#1/20           |
+ft_memmove.o
+820       `
+ft_memmove.o
+#1/20           |
+ft_memchr.o
+748       `
+ft_memchr.o
+#1/20           |
+ft_memcmp.o
+772       `
+ft_memcmp.o
+#1/20           |
+ft_strlen.o
+684       `
+ft_strlen.o
+#1/20           |
+ft_strcpy.o
+780       `
+ft_strcpy.o
+#1/20           |
+ft_strdup.o
+820       `
+ft_strdup.o
+#1/20           |
+ft_strncpy.o
+780       `
+ft_strncpy.o
+#1/20           |
+ft_strcat.o
+756       `
+ft_strcat.o
+#1/20           |
+ft_strncat.o
+812       `
+ft_strncat.o
+#1/20           |
+ft_strlcat.o
+1076      `
+ft_strlcat.o
+#1/20           |
+ft_strchr.o
+764       `
+ft_strchr.o
+#1/20           |
+ft_strrchr.o
+780       `
+ft_strrchr.o
+#1/20           |
+ft_strstr.o
+844       `
+ft_strstr.o
+#1/20           |
+ft_strnstr.o
+916       `
+ft_strnstr.o
+#1/20           |
+ft_strcmp.o
+812       `
+ft_strcmp.o
+#1/20           |
+ft_strncmp.o
+804       `
+ft_strncmp.o
+#1/20           |
+ft_atoi.o
+972       `
+ft_atoi.o
+#1/20           |
+ft_isalpha.o
+692       `
+ft_isalpha.o
+#1/20           |
+ft_isdigit.o
+676       `
+ft_isdigit.o
+#1/20           |
+ft_isalnum.o
+772       `
+ft_isalnum.o
+#1/20           |
+ft_isascii.o
+676       `
+ft_isascii.o
+#1/20           |
+ft_isprint.o
+676       `
+ft_isprint.o
+#1/20           |
+ft_toupper.o
+676       `
+ft_toupper.o
+#1/20           |
+ft_tolower.o
+676       `
+ft_tolower.o
+#1/20           |
+ft_memalloc.o
+780       `
+ft_memalloc.o
+#1/20           |
+ft_memdel.o
+700       `
+ft_memdel.o
+#1/20           |
+ft_strnew.o
+692       `
+ft_strnew.o
+#1/20           |
+ft_strdel.o
+684       `
+ft_strdel.o
+#1/20           |
+ft_strclr.o
+692       `
+ft_strclr.o
+#1/20           |
+ft_striter.o
+716       `
+ft_striter.o
+#1/20           |
+ft_striteri.o
+740       `
+ft_striteri.o
+#1/20           |
+ft_strmap.o
+804       `
+ft_strmap.o
+#1/20           |
+ft_strmapi.o
+812       `
+ft_strmapi.o
+#1/20           |
+ft_strequ.o
+860       `
+ft_strequ.o
+#1/20           |
+ft_strnequ.o
+804       `
+ft_strnequ.o
+#1/20           |
+ft_strsub.o
+932       `
+ft_strsub.o
+#1/28           |
+ft_strsub_no_leaks.o
+780       `
+ft_strsub_no_leaks.o
+#1/20           |
+ft_strjoin.o
+852       `
+ft_strjoin.o
+#1/28           |
+ft_strjoin_no_leaks.o
+772       `
+ft_strjoin_no_leaks.o
+#1/20           |
+ft_strtrim.o
+1156      `
+ft_strtrim.o
+#1/20           |
+ft_strsplit.o
+1812      `
+ft_strsplit.o
+#1/20           |
+ft_itoa.o
+1140      `
+ft_itoa.o
+#1/20           |
+ft_putchar.o
+700       `
+ft_putchar.o
+#1/20           |
+ft_putstr.o
+740       `
+ft_putstr.o
+#1/20           |
+ft_putendl.o
+732       `
+ft_putendl.o
+#1/20           |
+ft_putnbr.o
+972       `
+ft_putnbr.o
+#1/20           |
+ft_putchar_fd.o
+708       `
+ft_putchar_fd.o
+#1/20           |
+ft_putstr_fd.o
+764       `
+ft_putstr_fd.o
+#1/20           |
+ft_putendl_fd.o
+748       `
+ft_putendl_fd.o
+#1/20           |
+ft_putnbr_fd.o
+996       `
+ft_putnbr_fd.o
+#1/20           |
+ft_lstnew.o
+932       `
+ft_lstnew.o
+#1/20           |
+ft_lstdelone.o
+740       `
+ft_lstdelone.o
+#1/20           |
+ft_lstdel.o
+740       `
+ft_lstdel.o
+#1/20           |
+ft_lstadd.o
+708       `
+ft_lstadd.o
+#1/20           |
+ft_lstadd_back.o
+732       `
+ft_lstadd_back.o
+#1/20           |
+ft_lstiter.o
+692       `
+ft_lstiter.o
+#1/20           |
+ft_lstmap.o
+788       `
+ft_lstmap.o
+#1/20           |
+ft_power.o
+756       `
+ft_power.o
+#1/20           |
+get_next_line.o
+2364      `
+get_next_line.o
+#1/20           |
+ft_printf.o
+4044      `
+ft_printf.o
+#1/20           |
+get_args.o
+2748      `
+get_args.o
+#1/20           |
+ft_itoa_base.o
+2196      `
+ft_itoa_base.o
+#1/20           |
+ft_number.o
+5172      `
+ft_number.o
+#1/12           |
+flags.o
+4196      `
+flags.o
+#1/20           |
+ft_wide_char.o
+1628      `
+ft_wide_char.o
+#1/20           |
+altnorme.o
+1452      `
+altnorme.o
+#1/12           |
+ft_abs.o
+660       `
+ft_abs.o
+./ft_nm: libft/libft.a: The file was not recognized as a valid object file
+

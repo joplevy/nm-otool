@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jplevy <jplevy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 16:14:23 by opus1io           #+#    #+#             */
-/*   Updated: 2019/01/18 13:39:58 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/03/02 14:27:27 by jplevy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_nm.h>
+# include <ft_nm.h>
 
 int		main(int ac, char **av)
 {
