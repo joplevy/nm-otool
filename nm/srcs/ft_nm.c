@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nm.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jplevy <jplevy@student.42.fr>              +#+  +:+       +#+        */
+/*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:10:03 by opus1io           #+#    #+#             */
-/*   Updated: 2019/03/18 18:24:14 by jplevy           ###   ########.fr       */
+/*   Updated: 2019/03/18 20:57:17 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ void			ft_parse_archive(void *ptr, size_t fsize)
 		// write(1, files + 1, 16);
 		ft_putendl((char *)(files + 1));
 		// write(1, files->ar_size, 10);
-		len = ft_atoi(name + 3);
+		len = ft_atoi(name + sizeof(AR_EFMT1) - 1);
 		// ft_putendl(files->ar_size);
-		files = (void *)files + sizeof(struct ar_hdr) + ft_atoi(files->ar_size);
 		ft_printf("%d : %02X\n", len, *(unsigned int *)((char *)(files + 1) + len));
+		files = (void *)files + sizeof(struct ar_hdr) + ft_atoi(files->ar_size);
 	}
 	// return;
 }
