@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:10:03 by opus1io           #+#    #+#             */
-/*   Updated: 2019/03/18 20:57:17 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/04/17 16:26:33 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static void		ft_print_symbols(t_list *list, t_flags flags, char *file, \
 {
 	t_list		*tmp;
 
+	if (!list)
+		return ;
 	if (!(flags & ST_ORDER))
 	{
 		ft_sort_alpha(&list);
@@ -47,7 +49,11 @@ static void		ft_print_symbols(t_list *list, t_flags flags, char *file, \
 			ft_reverse_list(&list);
 	}
 	if (flags & MANY)
+	{
 		ft_printf("\n%s:\n", file);
+		if (flags & ARCH)
+			free(file);
+	}
 	tmp = list;
 	while (tmp)
 	{
@@ -56,50 +62,74 @@ static void		ft_print_symbols(t_list *list, t_flags flags, char *file, \
 	}
 }
 
-void			ft_parse_archive(void *ptr, size_t fsize)
+char			*ft_archive_str(char *file, char *arch)
+{
+	char	*ret;
+	int		archlen;
+	int		filelen;
+
+	filelen = ft_strlen(file);
+	archlen = ft_strlen(arch);
+	if (!(ret = ft_memalloc(filelen + archlen + 3)))
+		return (NULL);
+	ft_memcpy(ret, arch, archlen);
+	ft_memcpy(ret + archlen + 1, file, filelen);
+	ret[archlen] = '(';
+	ret[archlen + 1 + filelen] = ')';
+	return (ret);
+}
+
+void			ft_parse_archive(void *ptr, size_t fsize, t_flags *flags, char *file)
 {
 	struct ar_hdr	*files;
 	char			*name;
 	int				len;
+	int				nsize;
 
 	files = ptr + SARMAG;
+	*flags |= ARCH;
 	while ((void *)files < ptr + fsize)
 	{
-		write(1, files->ar_name, 16);
 		name = files->ar_name;
-		if (ft_strncmp(files->ar_name, AR_EFMT1, sizeof(AR_EFMT1) - 1))
-			ft_putendl("qqchose here");
-		write(1, "|\n", 2);
-		// write(1, files + 1, 16);
-		ft_putendl((char *)(files + 1));
-		// write(1, files->ar_size, 10);
-		len = ft_atoi(name + sizeof(AR_EFMT1) - 1);
-		// ft_putendl(files->ar_size);
-		ft_printf("%d : %02X\n", len, *(unsigned int *)((char *)(files + 1) + len));
-		files = (void *)files + sizeof(struct ar_hdr) + ft_atoi(files->ar_size);
+		if (ft_strncmp(files->ar_name, AR_EFMT1, sizeof(AR_EFMT1) - 1) == 0)
+		{
+			len = ft_atoi(name + sizeof(AR_EFMT1) - 1);
+			nsize = ft_atoi(files->ar_size);
+			if (ft_strncmp((char *)(files + 1), "__.SYMDEF", 9))
+				ft_magic_run((char *)(files + 1) + len, nsize - len, flags, ft_archive_str((char *)(files + 1), file));
+		}
+		files = (void *)files + sizeof(struct ar_hdr) + nsize;
 	}
-	// return;
+	*flags &= ~ARCH;
 }
 
-static t_list	*ft_magic_run(void *ptr, size_t fsize)
+void		ft_magic_run(void *ptr, size_t fsize, t_flags *flags, char *file)
 {
 	unsigned int	magic;
+	t_list			*list;
 
+	list = NULL;
 	magic = *(unsigned int *)ptr;
 	if (magic == MH_MAGIC_64)
-		return (ft_parse_binary(ptr, true));
-	if (magic == MH_MAGIC)
-		return (ft_parse_binary(ptr, false));
-	if (magic == MH_CIGAM || magic == MH_CIGAM_64)
+		list = ft_parse_binary(ptr, true);
+	else if (magic == MH_MAGIC)
+		list = ft_parse_binary(ptr, false);
+	else if (magic == MH_CIGAM || magic == MH_CIGAM_64)
 		ft_putendl("reverse");
-	if (magic == FAT_MAGIC || magic == FAT_CIGAM)
+	else if (magic == FAT_MAGIC || magic == FAT_CIGAM)
 		ft_putendl("FAT 32");
-	if (magic == FAT_MAGIC_64 || magic == FAT_CIGAM_64)
+	else if (magic == FAT_MAGIC_64 || magic == FAT_CIGAM_64)
 		ft_putendl("FAT 64");
-	if (ft_strncmp(ptr, ARMAG, SARMAG) == 0)
-		ft_parse_archive(ptr, fsize);
-	// ft_printf("%x\n", magic);
-	return (NULL);
+	else if (ft_strncmp(ptr, ARMAG, SARMAG) == 0)
+	{
+		*flags |= MANY;
+		ft_parse_archive(ptr, fsize, flags, file);
+	}
+	else
+		ft_printf("./ft_nm: %s: The file was not recognized \
+as a valid object file\n\n", file);
+	ft_print_symbols(list, *flags, file, \
+		(*(unsigned int *)ptr == MH_MAGIC_64) ? true : false);
 }
 
 static void		ft_process_file(char *file, t_flags flags)
@@ -107,7 +137,6 @@ static void		ft_process_file(char *file, t_flags flags)
 	int			fd;
 	char		*ptr;
 	struct stat	buff;
-	t_list		*list;
 
 	if ((fd = open(file, O_RDONLY)) < 0 || (fstat(fd, &buff) < 0))
 	{
@@ -117,11 +146,7 @@ static void		ft_process_file(char *file, t_flags flags)
 	if ((ptr = mmap(0, buff.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) \
 		== MAP_FAILED)
 		return ;
-	if ((list = ft_magic_run(ptr, buff.st_size)) == NULL)
-		ft_printf("./ft_nm: %s: The file was not recognized \
-as a valid object file\n\n", file);
-	ft_print_symbols(list, flags, file, \
-		(*(unsigned int *)ptr == MH_MAGIC_64) ? true : false);
+	ft_magic_run(ptr, buff.st_size, &flags, file);
 	munmap(ptr, buff.st_size);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nm.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jplevy <jplevy@student.42.fr>              +#+  +:+       +#+        */
+/*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/03/18 14:22:46 by jplevy           ###   ########.fr       */
+/*   Updated: 2019/04/17 16:30:08 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <sys/stat.h>
 # include <sys/mman.h>
 # include <stdbool.h>
+ #include <stdlib.h>
 
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
@@ -33,7 +34,8 @@ typedef enum	e_flags
 	REVERSE = 1,
 	ST_ORDER = 2,
 	AOUT = 4,
-	MANY = 8
+	MANY = 8,
+	ARCH = 16
 }				t_flags;
 
 typedef struct	s_syminfo{
@@ -87,6 +89,7 @@ char	*ft_get_sections(struct mach_header *header, struct load_command *lc, bool 
 **
 */
 
+void	ft_magic_run(void *ptr, size_t fsize, t_flags *flags, char *file);
 void	ft_nm(int ac, char **av, t_flags flags);
 
 /*
