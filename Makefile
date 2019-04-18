@@ -6,14 +6,14 @@
 #    By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 13:21:18 by jplevy            #+#    #+#              #
-#    Updated: 2019/02/11 17:49:52 by opus1io          ###   ########.fr        #
+#    Updated: 2019/04/17 17:20:54 by opus1io          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NM_NAME = ft_nm
 OT_NAME = ft_otool
 
-CC = gcc
+CC = clang
 CFLAG = -Wall -Werror -Wextra
 
 NM_PATH = ./nm/
