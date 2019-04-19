@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/04/17 16:30:08 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/04/18 17:33:56 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <mach-o/loader.h>
 # include <mach-o/nlist.h>
 # include <mach-o/fat.h>
+# include <mach/machine.h>
 # include <ar.h>
 
 # define NB_FLAG 2
@@ -50,6 +51,12 @@ typedef struct	s_flag_funcs
 	char 		flag;
 	int 		(*func_call)(t_flags *);
 } 				t_flag_funcs;
+
+typedef struct	s_boolinfo{
+	bool		is_64;
+	bool		is_swap;
+}				t_boolinfo;
+
 
 /*
 **	merge_sort.c

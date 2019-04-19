@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:10:03 by opus1io           #+#    #+#             */
-/*   Updated: 2019/04/17 16:26:33 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/04/18 17:59:07 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,63 @@ char			*ft_archive_str(char *file, char *arch)
 	return (ret);
 }
 
+
+uint32_t	swap_int32(uint32_t data)
+{
+	return (((data & 0xff000000) >> 24) |
+			((data & 0x00ff0000) >> 8) |
+			((data & 0x0000ff00) << 8) |
+			((data & 0x000000ff) << 24));
+}
+
+uint64_t	swap_int64(uint64_t data)
+{
+	return ((((data & 0xff00000000000000ULL) >> 56) |
+			((data & 0x00ff000000000000ULL) >> 40) |
+			((data & 0x0000ff0000000000ULL) >> 24) |
+			((data & 0x000000ff00000000ULL) >>  8) |
+			((data & 0x00000000ff000000ULL) <<  8) |
+			((data & 0x0000000000ff0000ULL) << 24) |
+			((data & 0x000000000000ff00ULL) << 40) |
+			((data & 0x00000000000000ffULL) << 56)));
+}
+
+uint32_t	get_int32_value(uint32_t data, bool is_swap)
+{
+	return (is_swap ? swap_int32(data) : data);
+}
+
+uint64_t	get_int64_value(uint64_t data, bool is_swap)
+{
+	return (is_swap ? swap_int64(data) : data);
+}
+
+void			ft_parse_fat(void *ptr, t_boolinfo info, t_flags *flags, char *file)
+{
+	struct fat_header	*header;
+	void				*arch;
+	void				*filestart;
+	size_t				i;
+
+	header = ptr;
+	i = 0;
+	arch = ptr + sizeof(struct fat_header);
+	while (i < get_int32_value(header->nfat_arch, info.is_swap))
+	{
+		if (get_int32_value(((struct fat_arch *)arch)->cputype, info.is_swap) == CPU_TYPE_X86_64)
+		{
+			filestart = (info.is_64)? ptr + get_int64_value(((struct fat_arch_64 *)arch)->offset, info.is_swap) : \
+				ptr + get_int32_value(((struct fat_arch *)arch)->offset, info.is_swap);
+			ft_magic_run(filestart, 0, flags, file);
+			return ;
+		}
+		arch += (info.is_64) ? sizeof(struct fat_arch_64) : sizeof(struct fat_arch);
+		i++;
+	}
+	ft_printf("./ft_nm: %s: The file was not recognized \
+as a valid object file. fat file doesn't contain x84_64 arch\n\n", file);
+}
+
 void			ft_parse_archive(void *ptr, size_t fsize, t_flags *flags, char *file)
 {
 	struct ar_hdr	*files;
@@ -107,19 +164,16 @@ void		ft_magic_run(void *ptr, size_t fsize, t_flags *flags, char *file)
 {
 	unsigned int	magic;
 	t_list			*list;
+	t_boolinfo		info;
 
 	list = NULL;
 	magic = *(unsigned int *)ptr;
-	if (magic == MH_MAGIC_64)
-		list = ft_parse_binary(ptr, true);
-	else if (magic == MH_MAGIC)
-		list = ft_parse_binary(ptr, false);
-	else if (magic == MH_CIGAM || magic == MH_CIGAM_64)
-		ft_putendl("reverse");
-	else if (magic == FAT_MAGIC || magic == FAT_CIGAM)
-		ft_putendl("FAT 32");
-	else if (magic == FAT_MAGIC_64 || magic == FAT_CIGAM_64)
-		ft_putendl("FAT 64");
+	info.is_64 = (magic == MH_MAGIC_64 || magic == MH_CIGAM_64 || magic == FAT_MAGIC_64 || magic == FAT_CIGAM_64);
+	info.is_swap = (magic == MH_CIGAM || magic == MH_CIGAM_64 || magic == FAT_CIGAM || magic == FAT_CIGAM_64);
+	if (magic == MH_MAGIC_64 || magic == MH_MAGIC)
+		list = ft_parse_binary(ptr, info.is_64);
+	else if (magic == FAT_MAGIC_64 || magic == FAT_CIGAM_64 || magic == FAT_MAGIC || magic == FAT_CIGAM)
+		ft_parse_fat(ptr, info, flags, file);
 	else if (ft_strncmp(ptr, ARMAG, SARMAG) == 0)
 	{
 		*flags |= MANY;
