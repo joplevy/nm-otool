@@ -1,35 +1,168 @@
 
 tests/32_exe_hard:
-00006ee5 a -[VMUOptionParser dealloc]
-00006ee5 t -[VMUOptionParser dealloc]
-00007d4f a -[VMUOptionParser discussion]
-00007d4f t -[VMUOptionParser discussion]
-00006dd2 a -[VMUOptionParser init]
+         u .objc_class_name_VMUOptionParser
+         u ___crashreporter_info__
+         u _nodesFull
+         u _backtracesContained
+         u _malloc_historyVersionString
+         u _malloc_historyVersionNumber
+000029a0 t _main
+0000336a t ___Block_byref_object_copy_
+00003395 t ___Block_byref_object_dispose_
+000033b6 t ___main_block_invoke
+000033d7 t ___copy_helper_block_
+00003402 t ___destroy_helper_block_
+00003423 t ___main_block_invoke25
+00003444 t ___copy_helper_block_26
+0000346f t ___destroy_helper_block_27
+00003490 t ___main_block_invoke30
+000034b1 t ___copy_helper_block_31
+000034dc t ___destroy_helper_block_32
+000034fd t ___main_block_invoke35
+0000351e t ___copy_helper_block_36
+00003549 t ___destroy_helper_block_37
+0000356a t ___main_block_invoke40
+0000358b t ___copy_helper_block_41
+000035b6 t ___destroy_helper_block_42
+000035d7 t ___main_block_invoke46
+000035e9 t ___copy_helper_block_47
+00003614 t ___destroy_helper_block_48
+00003635 t ___main_block_invoke52
+00003647 t ___copy_helper_block_53
+00003672 t ___destroy_helper_block_54
+00003693 t ___main_block_invoke57
+000036a5 t ___copy_helper_block_58
+000036d0 t ___destroy_helper_block_59
+000036f1 t ___main_block_invoke62
+00003703 t ___copy_helper_block_63
+0000372e t ___destroy_helper_block_64
+0000374f t ___main_block_invoke67
+00003761 t ___copy_helper_block_68
+0000378c t ___destroy_helper_block_69
+000037ad t ___main_block_invoke72
+000037bf t ___copy_helper_block_73
+000037ea t ___destroy_helper_block_74
+0000380b t ___main_block_invoke77
+0000381d t ___copy_helper_block_78
+00003848 t ___destroy_helper_block_79
+00003869 t ___main_block_invoke82
+0000387b t ___copy_helper_block_83
+000038a6 t ___destroy_helper_block_84
+000038c7 t ___main_block_invoke87
+00003926 t ___main_block_invoke_2
+00003a3e t ___copy_helper_block_103
+00003a87 t ___destroy_helper_block_104
+00003abd t ___main_block_invoke123
+0000477c t _printAllBySizeOrCount
+00004bb0 t _printAddressHistory
+00004dd0 t ___copy_helper_block_165
+00004e9b t ___destroy_helper_block_166
+00004f30 t _highWaterMarkRecorder
+00004ff5 t ___debugMallocStackLogging_block_invoke
+000054fa t ___printCallTree_block_invoke
+000061ae t ___printCallTree_block_invoke_2
+00006203 t _liveMallocBlockRecorder
+0000628d t ___copy_helper_block_226
+000062b8 t ___destroy_helper_block_227
+000062d9 t _mallocBlockStackIdentifierRecorder
+00006343 t _highWaterMarkMallocBlockRecorder
+000063c8 t ___copy_helper_block_293
+0000642b t ___destroy_helper_block_294
+00006474 t _throwExceptionIfPastHighWaterMark
+000064eb t _insertRecord
+0000684d t _sortBySize
+0000687c t _sortByCount
+00006895 t _printStack
+00006ac2 t _printRecord
+00006ce0 t _VMUOptionParserError
 00006dd2 t -[VMUOptionParser init]
-00007dd2 a -[VMUOptionParser parametersShowAsAssignment]
-00007dd2 t -[VMUOptionParser parametersShowAsAssignment]
-000075d7 a -[VMUOptionParser parseArgumentsWithBlock:]
-000075d7 t -[VMUOptionParser parseArgumentsWithBlock:]
-00007c7d a -[VMUOptionParser purposeDescription]
-00007c7d t -[VMUOptionParser purposeDescription]
-00006fdc a -[VMUOptionParser registerOptionWithLongName:shortName:hasArgument:argumentName:optionDescription:handler:]
+00006ecb t __arrayFreeValue
+00006ee5 t -[VMUOptionParser dealloc]
 00006fdc t -[VMUOptionParser registerOptionWithLongName:shortName:hasArgument:argumentName:optionDescription:handler:]
-00007d7c a -[VMUOptionParser setDiscussion:]
-00007d7c t -[VMUOptionParser setDiscussion:]
-00007dde a -[VMUOptionParser setParametersShowAsAssignment:]
-00007dde t -[VMUOptionParser setParametersShowAsAssignment:]
-00007caa a -[VMUOptionParser setPurposeDescription:]
-00007caa t -[VMUOptionParser setPurposeDescription:]
-00007dc4 a -[VMUOptionParser setSingleHyphenLongNames:]
-00007dc4 t -[VMUOptionParser setSingleHyphenLongNames:]
-00007d13 a -[VMUOptionParser setSyntaxDescription:]
-00007d13 t -[VMUOptionParser setSyntaxDescription:]
-00007db8 a -[VMUOptionParser singleHyphenLongNames]
-00007db8 t -[VMUOptionParser singleHyphenLongNames]
-00007ce6 a -[VMUOptionParser syntaxDescription]
-00007ce6 t -[VMUOptionParser syntaxDescription]
-0000795c a -[VMUOptionParser usage:]
+000075d7 t -[VMUOptionParser parseArgumentsWithBlock:]
 0000795c t -[VMUOptionParser usage:]
+00007c7d t -[VMUOptionParser purposeDescription]
+00007caa t -[VMUOptionParser setPurposeDescription:]
+00007ce6 t -[VMUOptionParser syntaxDescription]
+00007d13 t -[VMUOptionParser setSyntaxDescription:]
+00007d4f t -[VMUOptionParser discussion]
+00007d7c t -[VMUOptionParser setDiscussion:]
+00007db8 t -[VMUOptionParser singleHyphenLongNames]
+00007dc4 t -[VMUOptionParser setSingleHyphenLongNames:]
+00007dd2 t -[VMUOptionParser parametersShowAsAssignment]
+00007dde t -[VMUOptionParser setParametersShowAsAssignment:]
+00007dec t _VMUOptionParserRegisterFlag
+00007ee9 t ___VMUOptionParserRegisterFlag_block_invoke
+00007f00 t ___copy_helper_block_
+00007f2b t ___destroy_helper_block_
+00007f4c t _whileTaskPeeking
+00008094 t _withTaskForPid
+00008c62 t _respawnToolIfNecessary
+0000913c t __with_listening_mach_port
+000092ac t ___respawnToolIfNecessary_block_invoke
+000095de t _set_special_port
+0000967d t ___respawnToolIfNecessary_block_invoke_2
+000096fd t ___respawnToolIfNecessary_block_invoke_3
+00009825 t __wait_for_port
+000098dd t __send_task_port
+00009995 t _enumerateProcesses
+00009b6d t ___enumerateProcesses_block_invoke
+00009b8b t _stackLogsAvailable
+00009c98 t _findStackLogFile
+00009df5 t _decapsulateIPS
+0000a17d t ___setupSignalHandlers_block_invoke
+0000a1da t _handleSignal
+0000a276 t ____request_port_from_parent_block_invoke
+0000a2c7 t ___copy_helper_block_
+0000a2f2 t ___destroy_helper_block_
+0000a313 t _hasSuffix
+0000a359 t _get_special_port
+0000a44d t _is_restrict
+0000a4a2 t _create_uniquing_table
+0000a5b6 t _destroy_uniquing_table
+0000a5fc t _expand_uniquing_table
+0000ab86 t _backtraceLocationForIndex
+0000ab98 t _enter_frames_in_table
+0000dd18 s _malloc_historyVersionString
+0000dd58 s _malloc_historyVersionNumber
+0000e2b0 s ___block_descriptor_tmp
+0000e2d0 s ___block_descriptor_tmp28
+0000e2f0 s ___block_descriptor_tmp33
+0000e310 s ___block_descriptor_tmp38
+0000e330 s ___block_descriptor_tmp43
+0000e350 s ___block_descriptor_tmp49
+0000e370 s ___block_descriptor_tmp55
+0000e390 s ___block_descriptor_tmp60
+0000e3b0 s ___block_descriptor_tmp65
+0000e3d0 s ___block_descriptor_tmp70
+0000e3f0 s ___block_descriptor_tmp75
+0000e410 s ___block_descriptor_tmp80
+0000e430 s ___block_descriptor_tmp85
+0000e448 s ___block_descriptor_tmp94
+0000e458 s ___block_literal_global
+0000e470 s ___block_descriptor_tmp106
+0000e490 s ___block_descriptor_tmp168
+0000e4a8 s ___block_descriptor_tmp218
+0000e4c0 s ___block_descriptor_tmp229
+0000e4e0 s ___block_descriptor_tmp295
+0000e500 s ___block_descriptor_tmp
+0000e520 s ___block_descriptor_tmp
+0000e530 s ___block_descriptor_tmp62
+0000e540 s ___block_descriptor_tmp65
+0000e550 s ___block_descriptor_tmp67
+0000e560 s ___block_literal_global
+0000e578 s ___block_descriptor_tmp105
+0000e588 s ___block_literal_global106
+0000e5a0 s ___block_descriptor_tmp109
+0000e9b8 s ___crashreporter_info__
+0000e9bc s _nodesFull
+0000e9c0 s _backtracesContained
+0000e9c4 b _mallocHistoryMode
+0000e9c8 b _debugTimer
+0000e9cc b _setupSignalHandlers.onceToken
+0000e9d0 b _kTaskBeingPeeked
+0000f1ec S .objc_class_name_VMUOptionParser
+00001000 T __mh_execute_header
          U .objc_class_name_NSAssertionHandler
          U .objc_class_name_NSAutoreleasePool
          U .objc_class_name_NSByteCountFormatter
@@ -49,17 +182,9 @@ tests/32_exe_hard:
          U .objc_class_name_VMUCallTreeRoot
          U .objc_class_name_VMUDebugTimer
          U .objc_class_name_VMUObjectIdentifier
-0000f1ec A .objc_class_name_VMUOptionParser
-         u .objc_class_name_VMUOptionParser
          U .objc_class_name_VMUProcInfo
          U .objc_class_name_VMUProcessDescription
          U .objc_class_name_VMURangeArray
-5646b55a a /Library/Caches/com.apple.xbs/Binaries/SamplingTools/SamplingTools-58042~2466/Objects/SamplingTools.build/malloc_history.build/Objects-normal/i386/BacktraceUniquing.o
-5646b559 a /Library/Caches/com.apple.xbs/Binaries/SamplingTools/SamplingTools-58042~2466/Objects/SamplingTools.build/malloc_history.build/Objects-normal/i386/VMUOptionParser.o
-5646b55a a /Library/Caches/com.apple.xbs/Binaries/SamplingTools/SamplingTools-58042~2466/Objects/SamplingTools.build/malloc_history.build/Objects-normal/i386/malloc_history_main.o
-5646b559 a /Library/Caches/com.apple.xbs/Binaries/SamplingTools/SamplingTools-58042~2466/Objects/SamplingTools.build/malloc_history.build/Objects-normal/i386/malloc_history_vers.o
-5646b559 a /Library/Caches/com.apple.xbs/Binaries/SamplingTools/SamplingTools-58042~2466/Objects/SamplingTools.build/malloc_history.build/Objects-normal/i386/restrict.o
-5646b559 a /Library/Caches/com.apple.xbs/Binaries/SamplingTools/SamplingTools-58042~2466/Objects/SamplingTools.build/malloc_history.build/Objects-normal/i386/sharedCode.o
          U _AuthorizationCopyRights
          U _AuthorizationCreate
          U _AuthorizationFree
@@ -102,10 +227,6 @@ tests/32_exe_hard:
          U _NSOwnedPointerMapValueCallBacks
          U _OSAtomicAdd32Barrier
          U _OSAtomicCompareAndSwap32Barrier
-00006ce0 a _VMUOptionParserError
-00006ce0 t _VMUOptionParserError
-00007dec a _VMUOptionParserRegisterFlag
-00007dec t _VMUOptionParserRegisterFlag
          U _VMUUniquifyString
          U __Block_copy
          U __Block_object_assign
@@ -115,204 +236,12 @@ tests/32_exe_hard:
          U __NSGetArgc
          U __NSGetArgv
          U __NSGetExecutablePath
-0000336a a ___Block_byref_object_copy_
-0000336a t ___Block_byref_object_copy_
-00003395 a ___Block_byref_object_dispose_
-00003395 t ___Block_byref_object_dispose_
          U ___CFConstantStringClassReference
-00007ee9 a ___VMUOptionParserRegisterFlag_block_invoke
-00007ee9 t ___VMUOptionParserRegisterFlag_block_invoke
-0000a276 a ____request_port_from_parent_block_invoke
-0000a276 t ____request_port_from_parent_block_invoke
-0000e520 a ___block_descriptor_tmp
-0000e500 a ___block_descriptor_tmp
-0000e2b0 a ___block_descriptor_tmp
-0000e520 a ___block_descriptor_tmp
-0000e500 a ___block_descriptor_tmp
-0000e2b0 a ___block_descriptor_tmp
-0000e578 a ___block_descriptor_tmp105
-0000e578 a ___block_descriptor_tmp105
-0000e470 a ___block_descriptor_tmp106
-0000e470 a ___block_descriptor_tmp106
-0000e5a0 a ___block_descriptor_tmp109
-0000e5a0 a ___block_descriptor_tmp109
-0000e490 a ___block_descriptor_tmp168
-0000e490 a ___block_descriptor_tmp168
-0000e4a8 a ___block_descriptor_tmp218
-0000e4a8 a ___block_descriptor_tmp218
-0000e4c0 a ___block_descriptor_tmp229
-0000e4c0 a ___block_descriptor_tmp229
-0000e2d0 a ___block_descriptor_tmp28
-0000e2d0 a ___block_descriptor_tmp28
-0000e4e0 a ___block_descriptor_tmp295
-0000e4e0 a ___block_descriptor_tmp295
-0000e2f0 a ___block_descriptor_tmp33
-0000e2f0 a ___block_descriptor_tmp33
-0000e310 a ___block_descriptor_tmp38
-0000e310 a ___block_descriptor_tmp38
-0000e330 a ___block_descriptor_tmp43
-0000e330 a ___block_descriptor_tmp43
-0000e350 a ___block_descriptor_tmp49
-0000e350 a ___block_descriptor_tmp49
-0000e370 a ___block_descriptor_tmp55
-0000e370 a ___block_descriptor_tmp55
-0000e390 a ___block_descriptor_tmp60
-0000e390 a ___block_descriptor_tmp60
-0000e530 a ___block_descriptor_tmp62
-0000e530 a ___block_descriptor_tmp62
-0000e540 a ___block_descriptor_tmp65
-0000e3b0 a ___block_descriptor_tmp65
-0000e540 a ___block_descriptor_tmp65
-0000e3b0 a ___block_descriptor_tmp65
-0000e550 a ___block_descriptor_tmp67
-0000e550 a ___block_descriptor_tmp67
-0000e3d0 a ___block_descriptor_tmp70
-0000e3d0 a ___block_descriptor_tmp70
-0000e3f0 a ___block_descriptor_tmp75
-0000e3f0 a ___block_descriptor_tmp75
-0000e410 a ___block_descriptor_tmp80
-0000e410 a ___block_descriptor_tmp80
-0000e430 a ___block_descriptor_tmp85
-0000e430 a ___block_descriptor_tmp85
-0000e448 a ___block_descriptor_tmp94
-0000e448 a ___block_descriptor_tmp94
-0000e560 a ___block_literal_global
-0000e458 a ___block_literal_global
-0000e560 a ___block_literal_global
-0000e458 a ___block_literal_global
-0000e588 a ___block_literal_global106
-0000e588 a ___block_literal_global106
          U ___bzero
-0000a2c7 a ___copy_helper_block_
-00007f00 a ___copy_helper_block_
-000033d7 a ___copy_helper_block_
-0000a2c7 t ___copy_helper_block_
-00007f00 t ___copy_helper_block_
-000033d7 t ___copy_helper_block_
-00003a3e a ___copy_helper_block_103
-00003a3e t ___copy_helper_block_103
-00004dd0 a ___copy_helper_block_165
-00004dd0 t ___copy_helper_block_165
-0000628d a ___copy_helper_block_226
-0000628d t ___copy_helper_block_226
-00003444 a ___copy_helper_block_26
-00003444 t ___copy_helper_block_26
-000063c8 a ___copy_helper_block_293
-000063c8 t ___copy_helper_block_293
-000034b1 a ___copy_helper_block_31
-000034b1 t ___copy_helper_block_31
-0000351e a ___copy_helper_block_36
-0000351e t ___copy_helper_block_36
-0000358b a ___copy_helper_block_41
-0000358b t ___copy_helper_block_41
-000035e9 a ___copy_helper_block_47
-000035e9 t ___copy_helper_block_47
-00003647 a ___copy_helper_block_53
-00003647 t ___copy_helper_block_53
-000036a5 a ___copy_helper_block_58
-000036a5 t ___copy_helper_block_58
-00003703 a ___copy_helper_block_63
-00003703 t ___copy_helper_block_63
-00003761 a ___copy_helper_block_68
-00003761 t ___copy_helper_block_68
-000037bf a ___copy_helper_block_73
-000037bf t ___copy_helper_block_73
-0000381d a ___copy_helper_block_78
-0000381d t ___copy_helper_block_78
-0000387b a ___copy_helper_block_83
-0000387b t ___copy_helper_block_83
-0000e9b8 a ___crashreporter_info__
-         u ___crashreporter_info__
-00004ff5 a ___debugMallocStackLogging_block_invoke
-00004ff5 t ___debugMallocStackLogging_block_invoke
-0000a2f2 a ___destroy_helper_block_
-00007f2b a ___destroy_helper_block_
-00003402 a ___destroy_helper_block_
-0000a2f2 t ___destroy_helper_block_
-00007f2b t ___destroy_helper_block_
-00003402 t ___destroy_helper_block_
-00003a87 a ___destroy_helper_block_104
-00003a87 t ___destroy_helper_block_104
-00004e9b a ___destroy_helper_block_166
-00004e9b t ___destroy_helper_block_166
-000062b8 a ___destroy_helper_block_227
-000062b8 t ___destroy_helper_block_227
-0000346f a ___destroy_helper_block_27
-0000346f t ___destroy_helper_block_27
-0000642b a ___destroy_helper_block_294
-0000642b t ___destroy_helper_block_294
-000034dc a ___destroy_helper_block_32
-000034dc t ___destroy_helper_block_32
-00003549 a ___destroy_helper_block_37
-00003549 t ___destroy_helper_block_37
-000035b6 a ___destroy_helper_block_42
-000035b6 t ___destroy_helper_block_42
-00003614 a ___destroy_helper_block_48
-00003614 t ___destroy_helper_block_48
-00003672 a ___destroy_helper_block_54
-00003672 t ___destroy_helper_block_54
-000036d0 a ___destroy_helper_block_59
-000036d0 t ___destroy_helper_block_59
-0000372e a ___destroy_helper_block_64
-0000372e t ___destroy_helper_block_64
-0000378c a ___destroy_helper_block_69
-0000378c t ___destroy_helper_block_69
-000037ea a ___destroy_helper_block_74
-000037ea t ___destroy_helper_block_74
-00003848 a ___destroy_helper_block_79
-00003848 t ___destroy_helper_block_79
-000038a6 a ___destroy_helper_block_84
-000038a6 t ___destroy_helper_block_84
-00009b6d a ___enumerateProcesses_block_invoke
-00009b6d t ___enumerateProcesses_block_invoke
          U ___error
          U ___mach_stack_logging_enumerate_records
          U ___mach_stack_logging_frames_for_uniqued_stack
          U ___mach_stack_logging_get_frames
-000033b6 a ___main_block_invoke
-000033b6 t ___main_block_invoke
-00003abd a ___main_block_invoke123
-00003abd t ___main_block_invoke123
-00003423 a ___main_block_invoke25
-00003423 t ___main_block_invoke25
-00003490 a ___main_block_invoke30
-00003490 t ___main_block_invoke30
-000034fd a ___main_block_invoke35
-000034fd t ___main_block_invoke35
-0000356a a ___main_block_invoke40
-0000356a t ___main_block_invoke40
-000035d7 a ___main_block_invoke46
-000035d7 t ___main_block_invoke46
-00003635 a ___main_block_invoke52
-00003635 t ___main_block_invoke52
-00003693 a ___main_block_invoke57
-00003693 t ___main_block_invoke57
-000036f1 a ___main_block_invoke62
-000036f1 t ___main_block_invoke62
-0000374f a ___main_block_invoke67
-0000374f t ___main_block_invoke67
-000037ad a ___main_block_invoke72
-000037ad t ___main_block_invoke72
-0000380b a ___main_block_invoke77
-0000380b t ___main_block_invoke77
-00003869 a ___main_block_invoke82
-00003869 t ___main_block_invoke82
-000038c7 a ___main_block_invoke87
-000038c7 t ___main_block_invoke87
-00003926 a ___main_block_invoke_2
-00003926 t ___main_block_invoke_2
-000054fa a ___printCallTree_block_invoke
-000054fa t ___printCallTree_block_invoke
-000061ae a ___printCallTree_block_invoke_2
-000061ae t ___printCallTree_block_invoke_2
-000092ac a ___respawnToolIfNecessary_block_invoke
-000092ac t ___respawnToolIfNecessary_block_invoke
-0000967d a ___respawnToolIfNecessary_block_invoke_2
-0000967d t ___respawnToolIfNecessary_block_invoke_2
-000096fd a ___respawnToolIfNecessary_block_invoke_3
-000096fd t ___respawnToolIfNecessary_block_invoke_3
-0000a17d a ___setupSignalHandlers_block_invoke
-0000a17d t ___setupSignalHandlers_block_invoke
          U ___stack_chk_fail
          U ___stack_chk_guard
          U ___stderrp
@@ -320,38 +249,17 @@ tests/32_exe_hard:
          U ___strlcpy_chk
          U ___udivdi3
          U ___umoddi3
-00006ecb a __arrayFreeValue
-00006ecb t __arrayFreeValue
          U __dispatch_source_type_proc
          U __exit
-00001000 A __mh_execute_header
-000098dd a __send_task_port
-000098dd t __send_task_port
          U __setjmp
-00009825 a __wait_for_port
-00009825 t __wait_for_port
-0000913c a __with_listening_mach_port
-0000913c t __with_listening_mach_port
          U _abort
          U _access
          U _asprintf
          U _atoi
-0000ab86 a _backtraceLocationForIndex
-0000ab86 t _backtraceLocationForIndex
-0000e9c0 a _backtracesContained
-         u _backtracesContained
          U _calloc
          U _closedir$UNIX2003
-0000a4a2 a _create_uniquing_table
-0000a4a2 t _create_uniquing_table
          U _csops
          U _csr_check
-0000e9c8 a _debugTimer
-0000e9c8 a _debugTimer
-00009df5 a _decapsulateIPS
-00009df5 t _decapsulateIPS
-0000a5b6 a _destroy_uniquing_table
-0000a5b6 t _destroy_uniquing_table
          U _dispatch_async
          U _dispatch_get_global_queue
          U _dispatch_main
@@ -359,24 +267,14 @@ tests/32_exe_hard:
          U _dispatch_resume
          U _dispatch_source_create
          U _dispatch_source_set_event_handler
-0000ab98 a _enter_frames_in_table
-0000ab98 t _enter_frames_in_table
-00009995 a _enumerateProcesses
-00009995 t _enumerateProcesses
          U _environ
          U _errc
          U _exit
-0000a5fc a _expand_uniquing_table
-0000a5fc t _expand_uniquing_table
          U _fgets
          U _fileno
-00009c98 a _findStackLogFile
-00009c98 t _findStackLogFile
          U _fprintf
          U _free
          U _fwrite$UNIX2003
-0000a359 a _get_special_port
-0000a359 t _get_special_port
          U _getenv
          U _geteuid
          U _getlogin
@@ -386,24 +284,8 @@ tests/32_exe_hard:
          U _getppid
          U _getprogname
          U _getuid
-0000a1da a _handleSignal
-0000a1da t _handleSignal
-0000a313 a _hasSuffix
-0000a313 t _hasSuffix
-00006343 a _highWaterMarkMallocBlockRecorder
-00006343 t _highWaterMarkMallocBlockRecorder
-00004f30 a _highWaterMarkRecorder
-00004f30 t _highWaterMarkRecorder
-000064eb a _insertRecord
-000064eb t _insertRecord
-0000a44d a _is_restrict
-0000a44d t _is_restrict
          U _isatty
-0000e9d0 a _kTaskBeingPeeked
-0000e9d0 a _kTaskBeingPeeked
          U _kill$UNIX2003
-00006203 a _liveMallocBlockRecorder
-00006203 t _liveMallocBlockRecorder
          U _mach_error_string
          U _mach_msg
          U _mach_msg_send
@@ -413,21 +295,9 @@ tests/32_exe_hard:
          U _mach_task_self_
          U _mach_vm_allocate
          U _mach_vm_deallocate
-000029a0 a _main
-000029a0 t _main
          U _malloc
-000062d9 a _mallocBlockStackIdentifierRecorder
-000062d9 t _mallocBlockStackIdentifierRecorder
-0000e9c4 a _mallocHistoryMode
-0000e9c4 a _mallocHistoryMode
-0000dd58 a _malloc_historyVersionNumber
-         u _malloc_historyVersionNumber
-0000dd18 a _malloc_historyVersionString
-         u _malloc_historyVersionString
          U _memchr
          U _memcpy
-0000e9bc a _nodesFull
-         u _nodesFull
          U _objc_enumerationMutation
          U _objc_exception_extract
          U _objc_exception_match
@@ -447,14 +317,6 @@ tests/32_exe_hard:
          U _posix_spawn
          U _posix_spawnattr_init
          U _posix_spawnattr_setbinpref_np
-00004bb0 a _printAddressHistory
-00004bb0 t _printAddressHistory
-0000477c a _printAllBySizeOrCount
-0000477c t _printAllBySizeOrCount
-00006ac2 a _printRecord
-00006ac2 t _printRecord
-00006895 a _printStack
-00006895 t _printStack
          U _printf
          U _proc_name
          U _proc_pidinfo
@@ -466,24 +328,12 @@ tests/32_exe_hard:
          U _qsort_b
          U _readdir$INODE64
          U _realloc
-00008c62 a _respawnToolIfNecessary
-00008c62 t _respawnToolIfNecessary
          U _sem_post
          U _sem_trywait
          U _sem_wait$UNIX2003
-000095de a _set_special_port
-000095de t _set_special_port
          U _setenv$UNIX2003
-0000e9cc a _setupSignalHandlers.onceToken
-0000e9cc a _setupSignalHandlers.onceToken
          U _signal
          U _snprintf
-0000687c a _sortByCount
-0000687c t _sortByCount
-0000684d a _sortBySize
-0000684d t _sortBySize
-00009b8b a _stackLogsAvailable
-00009b8b t _stackLogsAvailable
          U _strcmp
          U _strdup
          U _strerror$UNIX2003
@@ -500,20 +350,70 @@ tests/32_exe_hard:
          U _task_set_exception_ports
          U _task_start_peeking
          U _task_stop_peeking
-00006474 a _throwExceptionIfPastHighWaterMark
-00006474 t _throwExceptionIfPastHighWaterMark
          U _unsetenv$UNIX2003
          U _vm_page_size
          U _waitpid$UNIX2003
-00007f4c a _whileTaskPeeking
-00007f4c t _whileTaskPeeking
-00008094 a _withTaskForPid
-00008094 t _withTaskForPid
          U _write$UNIX2003
          U dyld_stub_binder
 
 tests/64_bundle:
-0000000000001a30 A _AllocQuickLookGeneratorPluginType
+0000000000001a30 T _AllocQuickLookGeneratorPluginType
+0000000000001ae5 T _DeallocQuickLookGeneratorPluginType
+0000000000008338 S _GQUErrorCat
+0000000000003666 T _GQULogCatIf_Fn
+000000000000355f T _GQULogCat_Fn
+0000000000003540 T _GQULogCat_Log
+000000000000352a T _GQUShouldLogCat_Fn
+0000000000008340 S _GQUWarningCat
+0000000000001d2c T _GeneratePreviewForURL
+000000000000203e T _GenerateThumbnailForURL
+000000000000af98 S _OBJC_CLASS_$_KQZArchive
+000000000000afe8 S _OBJC_CLASS_$_KQZArchiveFileInputStream
+000000000000b038 S _OBJC_CLASS_$_KQZArchiveMemoryInputStream
+000000000000b088 S _OBJC_CLASS_$_KQZEntry
+000000000000b0d8 S _OBJC_CLASS_$_KQZEntryInflateInputStream
+000000000000b128 S _OBJC_CLASS_$_KQZEntryUncompressedInputStream
+000000000000b1a0 S _OBJC_CLASS_$_KQZException
+000000000000b1c8 S _OBJC_CLASS_$_KQZInflateInputStream
+000000000000a690 S _OBJC_EHTYPE_$_KQZException
+000000000000aec8 S _OBJC_IVAR_$_KQZArchiveFileInputStream.mBuffer
+000000000000aee0 S _OBJC_IVAR_$_KQZArchiveFileInputStream.mBufferEnd
+000000000000aed8 S _OBJC_IVAR_$_KQZArchiveFileInputStream.mBufferStart
+000000000000aec0 S _OBJC_IVAR_$_KQZArchiveFileInputStream.mFile
+000000000000aed0 S _OBJC_IVAR_$_KQZArchiveFileInputStream.mSize
+000000000000aef0 S _OBJC_IVAR_$_KQZArchiveMemoryInputStream.mBytes
+000000000000aee8 S _OBJC_IVAR_$_KQZArchiveMemoryInputStream.mData
+000000000000aef8 S _OBJC_IVAR_$_KQZArchiveMemoryInputStream.mSize
+000000000000af48 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mCalculatedCrc
+000000000000af40 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mCheckCrc
+000000000000af38 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mEnd
+000000000000af50 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mInput
+000000000000af30 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mOffset
+000000000000af68 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mOutBuffer
+000000000000af58 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mOutBufferSize
+000000000000af60 S _OBJC_IVAR_$_KQZEntryInflateInputStream.mStream
+000000000000af78 S _OBJC_IVAR_$_KQZEntryUncompressedInputStream.mEnd
+000000000000af80 S _OBJC_IVAR_$_KQZEntryUncompressedInputStream.mInput
+000000000000af70 S _OBJC_IVAR_$_KQZEntryUncompressedInputStream.mOffset
+000000000000af88 S _OBJC_IVAR_$_KQZInflateInputStream.mInput
+000000000000af90 S _OBJC_IVAR_$_KQZInflateInputStream.mStream
+000000000000afc0 S _OBJC_METACLASS_$_KQZArchive
+000000000000b010 S _OBJC_METACLASS_$_KQZArchiveFileInputStream
+000000000000b060 S _OBJC_METACLASS_$_KQZArchiveMemoryInputStream
+000000000000b0b0 S _OBJC_METACLASS_$_KQZEntry
+000000000000b100 S _OBJC_METACLASS_$_KQZEntryInflateInputStream
+000000000000b150 S _OBJC_METACLASS_$_KQZEntryUncompressedInputStream
+000000000000b178 S _OBJC_METACLASS_$_KQZException
+000000000000b1f0 S _OBJC_METACLASS_$_KQZInflateInputStream
+0000000000001c33 T _QuickLookGeneratorPluginAddRef
+0000000000001c58 T _QuickLookGeneratorPluginFactory
+0000000000001c41 T _QuickLookGeneratorPluginRelease
+0000000000001b21 T _QuickLookGeneratorQueryInterface
+0000000000005320 T __Z12GQZXmlIOReadPvPci
+0000000000005393 T __Z13GQZXmlIOClosePv
+0000000000002fe2 T __Z37GenerateThumbnailForProtectedDocumentPvP20__QLThumbnailRequestPK10__CFString
+0000000000005e61 T __Z7GQZOpenP8NSStringPKc
+0000000000008330 S _kQLThumbnailPropertyInlinePreviewModeKey
                  U _CFArrayGetCount
                  U _CFArrayGetValueAtIndex
                  U _CFBundleCopyResourceURL
@@ -556,24 +456,7 @@ tests/64_bundle:
                  U _CGPDFDocumentCreateWithProvider
                  U _CGPDFDocumentGetNumberOfPages
                  U _CGPointZero
-0000000000001ae5 A _DeallocQuickLookGeneratorPluginType
-0000000000008338 A _GQUErrorCat
-0000000000003666 A _GQULogCatIf_Fn
-000000000000355f A _GQULogCat_Fn
-0000000000003540 A _GQULogCat_Log
-000000000000352a A _GQUShouldLogCat_Fn
-0000000000008340 A _GQUWarningCat
-0000000000001d2c A _GeneratePreviewForURL
-000000000000203e A _GenerateThumbnailForURL
                  U _NSLog
-000000000000af98 A _OBJC_CLASS_$_KQZArchive
-000000000000afe8 A _OBJC_CLASS_$_KQZArchiveFileInputStream
-000000000000b038 A _OBJC_CLASS_$_KQZArchiveMemoryInputStream
-000000000000b088 A _OBJC_CLASS_$_KQZEntry
-000000000000b0d8 A _OBJC_CLASS_$_KQZEntryInflateInputStream
-000000000000b128 A _OBJC_CLASS_$_KQZEntryUncompressedInputStream
-000000000000b1a0 A _OBJC_CLASS_$_KQZException
-000000000000b1c8 A _OBJC_CLASS_$_KQZInflateInputStream
                  U _OBJC_CLASS_$_NSArray
                  U _OBJC_CLASS_$_NSAutoreleasePool
                  U _OBJC_CLASS_$_NSData
@@ -589,38 +472,8 @@ tests/64_bundle:
                  U _OBJC_CLASS_$_NSString
                  U _OBJC_CLASS_$_NSURL
                  U _OBJC_CLASS_$_PDFDocument
-000000000000a690 A _OBJC_EHTYPE_$_KQZException
                  U _OBJC_EHTYPE_$_NSException
                  U _OBJC_EHTYPE_id
-000000000000aec8 A _OBJC_IVAR_$_KQZArchiveFileInputStream.mBuffer
-000000000000aee0 A _OBJC_IVAR_$_KQZArchiveFileInputStream.mBufferEnd
-000000000000aed8 A _OBJC_IVAR_$_KQZArchiveFileInputStream.mBufferStart
-000000000000aec0 A _OBJC_IVAR_$_KQZArchiveFileInputStream.mFile
-000000000000aed0 A _OBJC_IVAR_$_KQZArchiveFileInputStream.mSize
-000000000000aef0 A _OBJC_IVAR_$_KQZArchiveMemoryInputStream.mBytes
-000000000000aee8 A _OBJC_IVAR_$_KQZArchiveMemoryInputStream.mData
-000000000000aef8 A _OBJC_IVAR_$_KQZArchiveMemoryInputStream.mSize
-000000000000af48 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mCalculatedCrc
-000000000000af40 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mCheckCrc
-000000000000af38 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mEnd
-000000000000af50 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mInput
-000000000000af30 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mOffset
-000000000000af68 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mOutBuffer
-000000000000af58 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mOutBufferSize
-000000000000af60 A _OBJC_IVAR_$_KQZEntryInflateInputStream.mStream
-000000000000af78 A _OBJC_IVAR_$_KQZEntryUncompressedInputStream.mEnd
-000000000000af80 A _OBJC_IVAR_$_KQZEntryUncompressedInputStream.mInput
-000000000000af70 A _OBJC_IVAR_$_KQZEntryUncompressedInputStream.mOffset
-000000000000af88 A _OBJC_IVAR_$_KQZInflateInputStream.mInput
-000000000000af90 A _OBJC_IVAR_$_KQZInflateInputStream.mStream
-000000000000afc0 A _OBJC_METACLASS_$_KQZArchive
-000000000000b010 A _OBJC_METACLASS_$_KQZArchiveFileInputStream
-000000000000b060 A _OBJC_METACLASS_$_KQZArchiveMemoryInputStream
-000000000000b0b0 A _OBJC_METACLASS_$_KQZEntry
-000000000000b100 A _OBJC_METACLASS_$_KQZEntryInflateInputStream
-000000000000b150 A _OBJC_METACLASS_$_KQZEntryUncompressedInputStream
-000000000000b178 A _OBJC_METACLASS_$_KQZException
-000000000000b1f0 A _OBJC_METACLASS_$_KQZInflateInputStream
                  U _OBJC_METACLASS_$_NSException
                  U _OBJC_METACLASS_$_NSObject
                  U _QLPreviewRequestSetDataRepresentation
@@ -631,16 +484,8 @@ tests/64_bundle:
                  U _QLThumbnailRequestGetMaximumSize
                  U _QLThumbnailRequestSetImageAtURL
                  U _QLThumbnailRequestSetImageWithData
-0000000000001c33 A _QuickLookGeneratorPluginAddRef
-0000000000001c58 A _QuickLookGeneratorPluginFactory
-0000000000001c41 A _QuickLookGeneratorPluginRelease
-0000000000001b21 A _QuickLookGeneratorQueryInterface
                  U __QLDictionaryBooleanValueForKey
                  U __Unwind_Resume
-0000000000005320 A __Z12GQZXmlIOReadPvPci
-0000000000005393 A __Z13GQZXmlIOClosePv
-0000000000002fe2 A __Z37GenerateThumbnailForProtectedDocumentPvP20__QLThumbnailRequestPK10__CFString
-0000000000005e61 A __Z7GQZOpenP8NSStringPKc
                  U __ZSt9terminatev
                  U ___CFConstantStringClassReference
                  U ___cxa_begin_catch
@@ -667,7 +512,6 @@ tests/64_bundle:
                  U _kQLThumbnailOptionIconModeKey
                  U _kQLThumbnailPropertyExtensionKey
                  U _kQLThumbnailPropertyIconFlavorKey
-0000000000008330 A _kQLThumbnailPropertyInlinePreviewModeKey
                  U _kUTTypePDF
                  U _lroundf
                  U _malloc
@@ -693,11 +537,13 @@ tests/64_bundle:
                  U dyld_stub_binder
 
 tests/64_exe_easy:
-0000000100000000 A __mh_execute_header
-0000000100000f90 A _main
+0000000100000000 T __mh_execute_header
+0000000100000f90 T _main
                  U dyld_stub_binder
 
 tests/64_exe_hard:
+0000000100046fa9 T ___explicit_bzero_hook
+0000000100000000 T __mh_execute_header
                  U _CFAbsoluteTimeGetCurrent
                  U _CFArrayCreate
                  U _CFBooleanGetTypeID
@@ -751,7 +597,6 @@ tests/64_exe_hard:
                  U ___CFConstantStringClassReference
                  U ___bzero
                  U ___error
-0000000100046fa9 A ___explicit_bzero_hook
                  U ___maskrune
                  U ___memcpy_chk
                  U ___memmove_chk
@@ -768,7 +613,6 @@ tests/64_exe_hard:
                  U ___tolower
                  U ___vsnprintf_chk
                  U __exit
-0000000100000000 A __mh_execute_header
                  U __res
                  U _abort
                  U _accept
@@ -974,12 +818,51 @@ tests/64_exe_hard:
                  U dyld_stub_binder
 
 tests/64_exe_medium:
-0000000100000000 A __mh_execute_header
-0000000100000f50 A _main
+0000000100000000 T __mh_execute_header
+0000000100000f50 T _main
                  U _printf
                  U dyld_stub_binder
 
 tests/64_lib_dynamic_hard:
+0000000000002aae T _svn_delta_make_editor
+00000000000029b5 T _svn_delta_wrap_window_handler
+00000000000038a6 T _svn_ra_make_callbacks
+0000000000001f30 T _svn_swig_pl_array_to_list
+0000000000004897 T _svn_swig_pl_blame_func
+000000000000205b T _svn_swig_pl_callback_thunk
+000000000000459f T _svn_swig_pl_cancel_func
+0000000000002044 T _svn_swig_pl_convert_array
+0000000000001ed3 T _svn_swig_pl_convert_hash
+00000000000053a3 T _svn_swig_pl_from_md5
+00000000000051cc T _svn_swig_pl_from_stream
+0000000000004151 T _svn_swig_pl_get_commit_log_func
+0000000000002a8e T _svn_swig_pl_hold_ref_in_pool
+000000000000444f T _svn_swig_pl_info_receiver
+000000000000522f T _svn_swig_pl_make_file
+0000000000004a43 T _svn_swig_pl_make_pool
+0000000000004b1b T _svn_swig_pl_make_stream
+00000000000040da T _svn_swig_pl_notify_func
+0000000000001d68 T _svn_swig_pl_objs_to_array
+0000000000001610 T _svn_swig_pl_objs_to_hash
+00000000000017e6 T _svn_swig_pl_objs_to_hash_by_name
+0000000000001b8f T _svn_swig_pl_objs_to_hash_of_revnum_t
+0000000000001d85 T _svn_swig_pl_prophash_to_hash
+0000000000005103 T _svn_swig_pl_ra_lock_callback
+0000000000004823 T _svn_swig_pl_status_func
+0000000000001c04 T _svn_swig_pl_strings_to_array
+0000000000001775 T _svn_swig_pl_strings_to_hash
+00000000000035b0 T _svn_swig_pl_thunk_authz_func
+000000000000349a T _svn_swig_pl_thunk_client_diff_summarize_func
+00000000000036c6 T _svn_swig_pl_thunk_commit_callback
+00000000000049c3 T _svn_swig_pl_thunk_config_enumerator
+000000000000352b T _svn_swig_pl_thunk_history_func
+00000000000033a8 T _svn_swig_pl_thunk_log_receiver
+0000000000003ce8 T _svn_swig_pl_thunk_simple_prompt
+0000000000003f6c T _svn_swig_pl_thunk_ssl_client_cert_prompt
+0000000000004023 T _svn_swig_pl_thunk_ssl_client_cert_pw_prompt
+0000000000003e6b T _svn_swig_pl_thunk_ssl_server_trust_prompt
+0000000000003db4 T _svn_swig_pl_thunk_username_prompt
+0000000000003723 T _thunk_get_wc_prop
                  U _PL_thr_key
                  U _Perl_PerlIO_close
                  U _Perl_PerlIO_fileno
@@ -1042,172 +925,108 @@ tests/64_lib_dynamic_hard:
                  U _strcmp
                  U _strlen
                  U _svn_delta_default_editor
-0000000000002aae A _svn_delta_make_editor
                  U _svn_delta_noop_window_handler
-00000000000029b5 A _svn_delta_wrap_window_handler
                  U _svn_error_create
-00000000000038a6 A _svn_ra_make_callbacks
                  U _svn_stream_create
                  U _svn_stream_set_close
                  U _svn_stream_set_read
                  U _svn_stream_set_write
                  U _svn_string_ncreate
-0000000000001f30 A _svn_swig_pl_array_to_list
-0000000000004897 A _svn_swig_pl_blame_func
-000000000000205b A _svn_swig_pl_callback_thunk
-000000000000459f A _svn_swig_pl_cancel_func
-0000000000002044 A _svn_swig_pl_convert_array
-0000000000001ed3 A _svn_swig_pl_convert_hash
-00000000000053a3 A _svn_swig_pl_from_md5
-00000000000051cc A _svn_swig_pl_from_stream
-0000000000004151 A _svn_swig_pl_get_commit_log_func
                  U _svn_swig_pl_get_current_pool
-0000000000002a8e A _svn_swig_pl_hold_ref_in_pool
-000000000000444f A _svn_swig_pl_info_receiver
-000000000000522f A _svn_swig_pl_make_file
-0000000000004a43 A _svn_swig_pl_make_pool
-0000000000004b1b A _svn_swig_pl_make_stream
-00000000000040da A _svn_swig_pl_notify_func
-0000000000001d68 A _svn_swig_pl_objs_to_array
-0000000000001610 A _svn_swig_pl_objs_to_hash
-00000000000017e6 A _svn_swig_pl_objs_to_hash_by_name
-0000000000001b8f A _svn_swig_pl_objs_to_hash_of_revnum_t
-0000000000001d85 A _svn_swig_pl_prophash_to_hash
-0000000000005103 A _svn_swig_pl_ra_lock_callback
-0000000000004823 A _svn_swig_pl_status_func
-0000000000001c04 A _svn_swig_pl_strings_to_array
-0000000000001775 A _svn_swig_pl_strings_to_hash
-00000000000035b0 A _svn_swig_pl_thunk_authz_func
-000000000000349a A _svn_swig_pl_thunk_client_diff_summarize_func
-00000000000036c6 A _svn_swig_pl_thunk_commit_callback
-00000000000049c3 A _svn_swig_pl_thunk_config_enumerator
-000000000000352b A _svn_swig_pl_thunk_history_func
-00000000000033a8 A _svn_swig_pl_thunk_log_receiver
-0000000000003ce8 A _svn_swig_pl_thunk_simple_prompt
-0000000000003f6c A _svn_swig_pl_thunk_ssl_client_cert_prompt
-0000000000004023 A _svn_swig_pl_thunk_ssl_client_cert_pw_prompt
-0000000000003e6b A _svn_swig_pl_thunk_ssl_server_trust_prompt
-0000000000003db4 A _svn_swig_pl_thunk_username_prompt
-0000000000003723 A _thunk_get_wc_prop
                  U dyld_stub_binder
 
 tests/64_lib_dynamic_medium:
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/array.o
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/free.o
-00000000568f8868 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_array.o)
-00000000568f8868 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_array_2.o)
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_bzero.o)
-00000000568f8868 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_error.o)
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_malloc.o)
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_memcpy.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_printf.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_printf_fd.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_putchar_fd.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_putdouble_fd.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_putnbr_fd.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_putstr_fd.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_putubase_fd.o)
-00000000568f8866 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_strlen.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_vprintf.o)
-00000000568f8867 a /nfs/zfs-student-4/users/dlancar/C/malloc/libft/libft.a(ft_vprintf_fd.o)
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/malloc.o
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/mem.o
-00000000568f8865 a /nfs/zfs-student-4/users/dlancar/C/malloc/realloc.o
+                 u _g_malloc_memory
+0000000000002310 t _find__
+00000000000024c0 t _can_realloc
+0000000000002760 t _free__
+0000000000002ab0 t _mem_find
+0000000000002bf0 t _chunk_create
+0000000000003060 d _error_opt.err_flags
+0000000000002080 T _alloc
+0000000000001690 T _array_add
+0000000000001b70 T _array_cpy
+00000000000019b0 T _array_free
+0000000000001a90 T _array_get
+0000000000001860 T _array_insert
+0000000000001590 T _array_new
+0000000000001fa0 T _array_new_s
+0000000000001ac0 T _array_next
+0000000000001c10 T _array_remove
+0000000000001770 T _array_resize
+00000000000019f0 T _array_set
+0000000000002940 T _chunk_find
+0000000000001cc0 T _error_opt
+00000000000025a0 T _free
+00000000000008a0 T _ft_bzero
+0000000000001d00 T _ft_error
+0000000000001dd0 T _ft_error_msg
+0000000000000950 T _ft_malloc
+00000000000008f0 T _ft_memcpy
+0000000000001d80 T _ft_perror
+0000000000000ca0 T _ft_printf
+0000000000001270 T _ft_printf_fd
+0000000000000a10 T _ft_putchar_fd
+0000000000000c10 T _ft_putdouble_fd
+0000000000000ac0 T _ft_putnbr_fd
+0000000000000a50 T _ft_putstr_fd
+0000000000001410 T _ft_putubase_fd
+00000000000009a0 T _ft_strlen
+0000000000000e40 T _ft_vprintf
+0000000000000e70 T _ft_vprintf_fd
+0000000000003068 S _g_malloc_memory
+0000000000002150 T _malloc
+00000000000021c0 T _realloc
+00000000000027b0 T _show_alloc_mem
                  U ___error
                  U ___stack_chk_fail
                  U ___stack_chk_guard
-0000000000002080 A _alloc
-0000000000002080 t _alloc
-0000000000001690 A _array_add
-0000000000001690 t _array_add
-0000000000001b70 A _array_cpy
-0000000000001b70 t _array_cpy
-00000000000019b0 A _array_free
-00000000000019b0 t _array_free
-0000000000001a90 A _array_get
-0000000000001a90 t _array_get
-0000000000001860 A _array_insert
-0000000000001860 t _array_insert
-0000000000001590 A _array_new
-0000000000001590 t _array_new
-0000000000001fa0 A _array_new_s
-0000000000001fa0 t _array_new_s
-0000000000001ac0 A _array_next
-0000000000001ac0 t _array_next
-0000000000001c10 A _array_remove
-0000000000001c10 t _array_remove
-0000000000001770 A _array_resize
-0000000000001770 t _array_resize
-00000000000019f0 A _array_set
-00000000000019f0 t _array_set
-00000000000024c0 a _can_realloc
-00000000000024c0 t _can_realloc
-0000000000002bf0 a _chunk_create
-0000000000002bf0 t _chunk_create
-0000000000002940 A _chunk_find
-0000000000002940 t _chunk_find
-0000000000001cc0 A _error_opt
-0000000000001cc0 t _error_opt
-0000000000003060 a _error_opt.err_flags
-0000000000003060 a _error_opt.err_flags
                  U _exit
-0000000000002310 a _find__
-0000000000002310 t _find__
-00000000000025a0 A _free
-00000000000025a0 t _free
-0000000000002760 a _free__
-0000000000002760 t _free__
-00000000000008a0 A _ft_bzero
-00000000000008a0 t _ft_bzero
-0000000000001d00 A _ft_error
-0000000000001d00 t _ft_error
-0000000000001dd0 A _ft_error_msg
-0000000000001dd0 t _ft_error_msg
-0000000000000950 A _ft_malloc
-0000000000000950 t _ft_malloc
-00000000000008f0 A _ft_memcpy
-00000000000008f0 t _ft_memcpy
-0000000000001d80 A _ft_perror
-0000000000001d80 t _ft_perror
-0000000000000ca0 A _ft_printf
-0000000000000ca0 t _ft_printf
-0000000000001270 A _ft_printf_fd
-0000000000001270 t _ft_printf_fd
-0000000000000a10 A _ft_putchar_fd
-0000000000000a10 t _ft_putchar_fd
-0000000000000c10 A _ft_putdouble_fd
-0000000000000c10 t _ft_putdouble_fd
-0000000000000ac0 A _ft_putnbr_fd
-0000000000000ac0 t _ft_putnbr_fd
-0000000000000a50 A _ft_putstr_fd
-0000000000000a50 t _ft_putstr_fd
-0000000000001410 A _ft_putubase_fd
-0000000000001410 t _ft_putubase_fd
-00000000000009a0 A _ft_strlen
-00000000000009a0 t _ft_strlen
-0000000000000e40 A _ft_vprintf
-0000000000000e40 t _ft_vprintf
-0000000000000e70 A _ft_vprintf_fd
-0000000000000e70 t _ft_vprintf_fd
-0000000000003068 A _g_malloc_memory
-                 u _g_malloc_memory
                  U _getpagesize
-0000000000002150 A _malloc
-0000000000002150 t _malloc
-0000000000002ab0 a _mem_find
-0000000000002ab0 t _mem_find
                  U _mmap
                  U _munmap
                  U _perror
-00000000000021c0 A _realloc
-00000000000021c0 t _realloc
-00000000000027b0 A _show_alloc_mem
-00000000000027b0 t _show_alloc_mem
                  U _sys_errlist
                  U _write
                  U dyld_stub_binder
 
 tests/fat_hard:
+000000000000224a T _ITCallApplication
+0000000000005e40 S _OBJC_CLASS_$_QCITView
+0000000000005e08 S _OBJC_IVAR_$_QCITView._currentArtwork
+0000000000005e20 S _OBJC_IVAR_$_QCITView._currentOSThermalPressureLevel
+0000000000005e30 S _OBJC_IVAR_$_QCITView._suggestedFrameRate
+0000000000005e38 S _OBJC_IVAR_$_QCITView._thermalLevelChanged
+0000000000005e28 S _OBJC_IVAR_$_QCITView._thermalNotificationToken
+0000000000005e18 S _OBJC_IVAR_$_QCITView.appCookie
+0000000000005e10 S _OBJC_IVAR_$_QCITView.appProc
+0000000000005e00 S _OBJC_IVAR_$_QCITView.isPlaying
+0000000000005e68 S _OBJC_METACLASS_$_QCITView
+00000000000029f3 T _PlayerGetFileTrackInfo
+0000000000002b35 T _PlayerGetITTrackInfoSize
+00000000000023df T _PlayerGetPluginData
+0000000000002963 T _PlayerGetPluginITFileSpec
+000000000000253b T _PlayerGetPluginNamedData
+00000000000026be T _PlayerIdle
+00000000000027c2 T _PlayerOpenURL
+00000000000028e3 T _PlayerRegisterVisualPlugin
+000000000000235d T _PlayerRequestCurrentTrackCoverArt
+0000000000002a94 T _PlayerSetFileTrackInfo
+00000000000022cf T _PlayerSetFullScreen
+000000000000249a T _PlayerSetPluginData
+000000000000260a T _PlayerSetPluginNamedData
+0000000000002740 T _PlayerShowAbout
+0000000000002863 T _PlayerUnregisterPlugin
+000000000000190f T _QCITGetVisualName
+0000000000001940 T _QCITGetVisualOptions
+00000000000015f0 T _QCITRegisterVisualPlugin
+000000000000154b T _QC_iTunes_Plugin_use_dispatch
+00000000000042e0 S _Quartz_Composer_VisualizerVersionNumber
+0000000000004290 S _Quartz_Composer_VisualizerVersionString
+000000000000172f T _RegisterOnePlugin
+0000000000002237 T _SetNumVersion
+0000000000005e94 S _handler
+00000000000015c0 T _iTunesPluginMainMachO
                  U _CFBundleGetMainBundle
                  U _CFBundleGetVersionNumber
                  U _CFDictionaryCreateMutable
@@ -1219,7 +1038,6 @@ tests/fat_hard:
                  U _CFStringGetCharacters
                  U _CFStringGetLength
                  U _IOPPFGetProperty
-000000000000224a A _ITCallApplication
                  U _NSLog
                  U _OBJC_CLASS_$_NSArray
                  U _OBJC_CLASS_$_NSDictionary
@@ -1228,36 +1046,11 @@ tests/fat_hard:
                  U _OBJC_CLASS_$_NSString
                  U _OBJC_CLASS_$_QCComposition
                  U _OBJC_CLASS_$_QCCompositionRepository
-0000000000005e40 A _OBJC_CLASS_$_QCITView
                  U _OBJC_CLASS_$_QCStructure
                  U _OBJC_CLASS_$_QCView
                  U _OBJC_EHTYPE_$_NSException
-0000000000005e08 A _OBJC_IVAR_$_QCITView._currentArtwork
-0000000000005e20 A _OBJC_IVAR_$_QCITView._currentOSThermalPressureLevel
-0000000000005e30 A _OBJC_IVAR_$_QCITView._suggestedFrameRate
-0000000000005e38 A _OBJC_IVAR_$_QCITView._thermalLevelChanged
-0000000000005e28 A _OBJC_IVAR_$_QCITView._thermalNotificationToken
-0000000000005e18 A _OBJC_IVAR_$_QCITView.appCookie
-0000000000005e10 A _OBJC_IVAR_$_QCITView.appProc
-0000000000005e00 A _OBJC_IVAR_$_QCITView.isPlaying
                  U _OBJC_METACLASS_$_NSObject
-0000000000005e68 A _OBJC_METACLASS_$_QCITView
                  U _OBJC_METACLASS_$_QCView
-00000000000029f3 A _PlayerGetFileTrackInfo
-0000000000002b35 A _PlayerGetITTrackInfoSize
-00000000000023df A _PlayerGetPluginData
-0000000000002963 A _PlayerGetPluginITFileSpec
-000000000000253b A _PlayerGetPluginNamedData
-00000000000026be A _PlayerIdle
-00000000000027c2 A _PlayerOpenURL
-00000000000028e3 A _PlayerRegisterVisualPlugin
-000000000000235d A _PlayerRequestCurrentTrackCoverArt
-0000000000002a94 A _PlayerSetFileTrackInfo
-00000000000022cf A _PlayerSetFullScreen
-000000000000249a A _PlayerSetPluginData
-000000000000260a A _PlayerSetPluginNamedData
-0000000000002740 A _PlayerShowAbout
-0000000000002863 A _PlayerUnregisterPlugin
                  U _QCCompositionAttributeNameKey
                  U _QCCompositionInputAudioPeakKey
                  U _QCCompositionInputAudioSpectrumKey
@@ -1265,20 +1058,12 @@ tests/fat_hard:
                  U _QCCompositionInputTrackPositionKey
                  U _QCCompositionInputTrackSignalKey
                  U _QCCompositionProtocolMusicVisualizer
-000000000000190f A _QCITGetVisualName
-0000000000001940 A _QCITGetVisualOptions
-00000000000015f0 A _QCITRegisterVisualPlugin
                  U _QCVisualizerIPCServer_End
                  U _QCVisualizerIPCServer_HasClients
                  U _QCVisualizerIPCServer_IsRunning
                  U _QCVisualizerIPCServer_SendAudioInformation
                  U _QCVisualizerIPCServer_SendTrackInformation
                  U _QCVisualizerIPCServer_Start
-000000000000154b A _QC_iTunes_Plugin_use_dispatch
-00000000000042e0 A _Quartz_Composer_VisualizerVersionNumber
-0000000000004290 A _Quartz_Composer_VisualizerVersionString
-000000000000172f A _RegisterOnePlugin
-0000000000002237 A _SetNumVersion
                  U __Block_object_assign
                  U __Block_object_dispose
                  U __NSConcreteGlobalBlock
@@ -1299,8 +1084,6 @@ tests/fat_hard:
                  U _dispatch_queue_create
                  U _free
                  U _getenv
-0000000000005e94 A _handler
-00000000000015c0 A _iTunesPluginMainMachO
                  U _kCFAllocatorDefault
                  U _kCFCopyStringDictionaryKeyCallBacks
                  U _kCFTypeDictionaryValueCallBacks
@@ -1322,59 +1105,59 @@ tests/fat_hard:
                  U dyld_stub_binder
 
 tests/ft_select32:
+00002880 t _circular
+000028d0 t _create_list
+00002cb0 t _next_col
+00002d20 t _print_file
+00002f60 t _ft_file_which_type
+000033a0 t _handle_sigcont
+000034a0 t _handling_quit
+000035f0 t _selection
+00003700 t _enter
+000037c0 t _get_elemno
+000038b0 t _get_move
+00004054 b _ft_glob.s
+00001000 T __mh_execute_header
+00003090 T _clear_win
+00002a00 T _free_list
+00003a70 T _ft_exit
+00002640 T _ft_fdprint
+000027c0 T _ft_glob
+00003b40 T _ft_init
+000021b0 T _ft_memcpy
+000039f0 T _ft_out_fd
+00002800 T _ft_parse
+00002700 T _ft_print
+00002240 T _ft_putchar_fd
+00002280 T _ft_putendl_fd
+00002300 T _ft_putnbr_fd
+00002400 T _ft_putstr_fd
+00002460 T _ft_strcpy
+000024d0 T _ft_strdup
+00002530 T _ft_strlen
+00003020 T _get_canon
+000031b0 T _get_size
+000032b0 T _handle_signal
+00003230 T _handle_winch
+000034c0 T _looping
+00003cd0 T _main
+00002580 T _print_arg
+00002b20 T _print_elem
+00002aa0 T _put_cursor
+00002fe0 T _set_term
+00003140 T _stat_cursor
          U ___stack_chk_fail
          U ___stack_chk_guard
-00001000 A __mh_execute_header
-00002880 a _circular
-00003090 A _clear_win
          U _close$UNIX2003
-000028d0 a _create_list
-00003700 a _enter
          U _exit
          U _free
-00002a00 A _free_list
-00003a70 A _ft_exit
-00002640 A _ft_fdprint
-00002f60 a _ft_file_which_type
-000027c0 A _ft_glob
-00004054 a _ft_glob.s
-00003b40 A _ft_init
-000021b0 A _ft_memcpy
-000039f0 A _ft_out_fd
-00002800 A _ft_parse
-00002700 A _ft_print
-00002240 A _ft_putchar_fd
-00002280 A _ft_putendl_fd
-00002300 A _ft_putnbr_fd
-00002400 A _ft_putstr_fd
-00002460 A _ft_strcpy
-000024d0 A _ft_strdup
-00002530 A _ft_strlen
-00003020 A _get_canon
-000037c0 a _get_elemno
-000038b0 a _get_move
-000031b0 A _get_size
          U _getenv
-000033a0 a _handle_sigcont
-000032b0 A _handle_signal
-00003230 A _handle_winch
-000034a0 a _handling_quit
          U _ioctl
-000034c0 A _looping
-00003cd0 A _main
          U _malloc
-00002cb0 a _next_col
          U _open$UNIX2003
-00002580 A _print_arg
-00002b20 A _print_elem
-00002d20 a _print_file
-00002aa0 A _put_cursor
          U _read$UNIX2003
-000035f0 a _selection
-00002fe0 A _set_term
          U _signal
          U _stat$INODE64
-00003140 A _stat_cursor
          U _tcgetattr
          U _tcsetattr
          U _tgetent
@@ -1385,59 +1168,59 @@ tests/ft_select32:
          U dyld_stub_binder
 
 tests/ft_select64:
+0000000100001c50 t _circular
+0000000100001ca0 t _create_list
+0000000100002010 t _next_col
+0000000100002070 t _print_file
+0000000100002220 t _ft_file_which_type
+0000000100002570 t _handle_sigcont
+0000000100002600 t _handling_quit
+0000000100002710 t _selection
+0000000100002810 t _enter
+00000001000028d0 t _get_elemno
+00000001000029c0 t _get_move
+00000001000030a8 b _ft_glob.s
+0000000100000000 T __mh_execute_header
+0000000100002330 T _clear_win
+0000000100001db0 T _free_list
+0000000100002b50 T _ft_exit
+0000000100001760 T _ft_fdprint
+0000000100001bb0 T _ft_glob
+0000000100002bc0 T _ft_init
+0000000100001250 T _ft_memcpy
+0000000100002af0 T _ft_out_fd
+0000000100001be0 T _ft_parse
+0000000100001980 T _ft_print
+00000001000012e0 T _ft_putchar_fd
+0000000100001320 T _ft_putendl_fd
+0000000100001380 T _ft_putnbr_fd
+0000000100001450 T _ft_putstr_fd
+00000001000014b0 T _ft_strcpy
+0000000100001530 T _ft_strdup
+0000000100001590 T _ft_strlen
+00000001000022d0 T _get_canon
+0000000100002400 T _get_size
+00000001000024a0 T _handle_signal
+0000000100002450 T _handle_winch
+0000000100002620 T _looping
+0000000100002cf0 T _main
+00000001000015f0 T _print_arg
+0000000100001ec0 T _print_elem
+0000000100001e60 T _put_cursor
+00000001000022a0 T _set_term
+00000001000023a0 T _stat_cursor
                  U ___stack_chk_fail
                  U ___stack_chk_guard
-0000000100000000 A __mh_execute_header
-0000000100001c50 a _circular
-0000000100002330 A _clear_win
                  U _close
-0000000100001ca0 a _create_list
-0000000100002810 a _enter
                  U _exit
                  U _free
-0000000100001db0 A _free_list
-0000000100002b50 A _ft_exit
-0000000100001760 A _ft_fdprint
-0000000100002220 a _ft_file_which_type
-0000000100001bb0 A _ft_glob
-00000001000030a8 a _ft_glob.s
-0000000100002bc0 A _ft_init
-0000000100001250 A _ft_memcpy
-0000000100002af0 A _ft_out_fd
-0000000100001be0 A _ft_parse
-0000000100001980 A _ft_print
-00000001000012e0 A _ft_putchar_fd
-0000000100001320 A _ft_putendl_fd
-0000000100001380 A _ft_putnbr_fd
-0000000100001450 A _ft_putstr_fd
-00000001000014b0 A _ft_strcpy
-0000000100001530 A _ft_strdup
-0000000100001590 A _ft_strlen
-00000001000022d0 A _get_canon
-00000001000028d0 a _get_elemno
-00000001000029c0 a _get_move
-0000000100002400 A _get_size
                  U _getenv
-0000000100002570 a _handle_sigcont
-00000001000024a0 A _handle_signal
-0000000100002450 A _handle_winch
-0000000100002600 a _handling_quit
                  U _ioctl
-0000000100002620 A _looping
-0000000100002cf0 A _main
                  U _malloc
-0000000100002010 a _next_col
                  U _open
-00000001000015f0 A _print_arg
-0000000100001ec0 A _print_elem
-0000000100002070 a _print_file
-0000000100001e60 A _put_cursor
                  U _read
-0000000100002710 a _selection
-00000001000022a0 A _set_term
                  U _signal
                  U _stat$INODE64
-00000001000023a0 A _stat_cursor
                  U _tcgetattr
                  U _tcsetattr
                  U _tgetent
@@ -1450,6 +1233,7 @@ tests/ft_select64:
 
 
 tests/ln:
+0000000100000000 T __mh_execute_header
                  U ___error
                  U ___snprintf_chk
                  U ___stack_chk_fail
@@ -1457,7 +1241,6 @@ tests/ln:
                  U ___stderrp
                  U ___stdoutp
                  U ___strlcpy_chk
-0000000100000000 A __mh_execute_header
                  U _basename
                  U _err
                  U _exit
@@ -1480,6 +1263,7 @@ tests/ln:
                  U dyld_stub_binder
 
 tests/ls:
+0000000100000000 T __mh_execute_header
                  U __DefaultRuneLocale
                  U ___assert_rtn
                  U ___bzero
@@ -1491,7 +1275,6 @@ tests/ls:
                  U ___stderrp
                  U ___stdoutp
                  U ___tolower
-0000000100000000 A __mh_execute_header
                  U _acl_free
                  U _acl_get_entry
                  U _acl_get_flag_np
@@ -1565,33 +1348,41 @@ tests/ls:
                  U dyld_stub_binder
 
 tests/mach_o_libSystem.B.dylib:
-0000000000001ac3 A R8289209$_close
-0000000000001ac8 A R8289209$_fork
-0000000000001acd A R8289209$_fsync
-0000000000001ad2 A R8289209$_getattrlist
-0000000000001ad7 A R8289209$_getrlimit
-0000000000001adc A R8289209$_getxattr
-0000000000001ae1 A R8289209$_open
-0000000000001ae6 A R8289209$_pthread_attr_destroy
-0000000000001aeb A R8289209$_pthread_attr_init
-0000000000001af0 A R8289209$_pthread_attr_setdetachstate
-0000000000001af5 A R8289209$_pthread_create
-0000000000001afa A R8289209$_pthread_mutex_lock
-0000000000001aff A R8289209$_pthread_mutex_unlock
-0000000000001b04 A R8289209$_pthread_self
-0000000000001b09 A R8289209$_ptrace
-0000000000001b0e A R8289209$_read
-0000000000001b13 A R8289209$_setattrlist
-0000000000001b18 A R8289209$_setrlimit
-0000000000001b1d A R8289209$_sigaction
-0000000000001b22 A R8289209$_stat
-0000000000001b27 A R8289209$_sysctl
-0000000000001b2c A R8289209$_time
-0000000000001b31 A R8289209$_unlink
-0000000000001b36 A R8289209$_write
-0000000000001f98 A ___System_BVersionNumber
-0000000000001f60 A ___System_BVersionString
-0000000000002228 A ___crashreporter_info__
+0000000000001a1a t _libSystem_initializer
+0000000000001bb8 t _mach_init_old
+00000000000021e0 s _libSystem_initializer.libkernel_funcs
+0000000000002210 s _libSystem_initializer.libpthread_funcs
+0000000000001ac3 T R8289209$_close
+0000000000001ac8 T R8289209$_fork
+0000000000001acd T R8289209$_fsync
+0000000000001ad2 T R8289209$_getattrlist
+0000000000001ad7 T R8289209$_getrlimit
+0000000000001adc T R8289209$_getxattr
+0000000000001ae1 T R8289209$_open
+0000000000001ae6 T R8289209$_pthread_attr_destroy
+0000000000001aeb T R8289209$_pthread_attr_init
+0000000000001af0 T R8289209$_pthread_attr_setdetachstate
+0000000000001af5 T R8289209$_pthread_create
+0000000000001afa T R8289209$_pthread_mutex_lock
+0000000000001aff T R8289209$_pthread_mutex_unlock
+0000000000001b04 T R8289209$_pthread_self
+0000000000001b09 T R8289209$_ptrace
+0000000000001b0e T R8289209$_read
+0000000000001b13 T R8289209$_setattrlist
+0000000000001b18 T R8289209$_setrlimit
+0000000000001b1d T R8289209$_sigaction
+0000000000001b22 T R8289209$_stat
+0000000000001b27 T R8289209$_sysctl
+0000000000001b2c T R8289209$_time
+0000000000001b31 T R8289209$_unlink
+0000000000001b36 T R8289209$_write
+0000000000001f98 S ___System_BVersionNumber
+0000000000001f60 S ___System_BVersionString
+0000000000002228 S ___crashreporter_info__
+0000000000001b77 T _libSystem_atfork_child
+0000000000001b59 T _libSystem_atfork_parent
+0000000000001b3b T _libSystem_atfork_prepare
+0000000000002220 D _mach_init_routine
                  U ___error
                  U ___keymgr_initializer
                  U ___libc_init
@@ -1631,15 +1422,7 @@ tests/mach_o_libSystem.B.dylib:
                  U _getattrlist
                  U _getrlimit
                  U _getxattr
-0000000000001b77 A _libSystem_atfork_child
-0000000000001b59 A _libSystem_atfork_parent
-0000000000001b3b A _libSystem_atfork_prepare
-0000000000001a1a a _libSystem_initializer
-00000000000021e0 a _libSystem_initializer.libkernel_funcs
-0000000000002210 a _libSystem_initializer.libpthread_funcs
                  U _libdispatch_init
-0000000000001bb8 a _mach_init_old
-0000000000002220 A _mach_init_routine
                  U _malloc
                  U _open
                  U _pthread_attr_destroy
@@ -1666,12 +1449,13 @@ tests/mach_o_libSystem.B.dylib:
                  U dyld_stub_binder
 
 tests/mach_o_sync:
-0000000100000000 A __mh_execute_header
+0000000100000000 T __mh_execute_header
                  U _exit
                  U _sync
                  U dyld_stub_binder
 
 tests/mach_o_x64_ls:
+0000000100000000 A __mh_execute_header
                  U __DefaultRuneLocale
                  U ___error
                  U ___maskrune
@@ -1681,7 +1465,6 @@ tests/mach_o_x64_ls:
                  U ___stderrp
                  U ___stdoutp
                  U ___tolower
-0000000100000000 A __mh_execute_header
                  U _acl_free
                  U _acl_get_entry
                  U _acl_get_flag_np
@@ -1755,6 +1538,7 @@ tests/mach_o_x64_ls:
                  U dyld_stub_binder
 
 tests/mach_o_x86_ls:
+00001000 A __mh_execute_header
          U __DefaultRuneLocale
          U ___divdi3
          U ___error
@@ -1768,7 +1552,6 @@ tests/mach_o_x86_ls:
          U ___tolower
          U ___udivdi3
          U ___umoddi3
-00001000 A __mh_execute_header
          U _acl_free
          U _acl_get_entry
          U _acl_get_flag_np
@@ -1842,13 +1625,16 @@ tests/mach_o_x86_ls:
          U dyld_stub_binder
 
 tests/object_medium:
-00000000000002c0 A __32
-00000000000002d0 A __64
-0000000000000080 A __64_section
-0000000000000240 A __64_segment
-0000000000000370 A __fat
+00000000000002c0 T __32
+00000000000002d0 T __64
+0000000000000080 T __64_section
+0000000000000240 T __64_segment
+0000000000000370 T __fat
+0000000000000480 T _dump
+0000000000001a08 S _g_name
+0000000000000500 T _main
+0000000000000000 T _print
                  U _count_digit_base
-0000000000000480 A _dump
                  U _ft_close
                  U _ft_open
                  U _ft_printf
@@ -1857,11 +1643,8 @@ tests/object_medium:
                  U _ft_strdup
                  U _ft_strndup
                  U _ft_strrchr
-0000000000001a08 A _g_name
                  U _io_map_file
                  U _io_unmap_file
-0000000000000500 A _main
-0000000000000000 A _print
 ./ft_nm: tests/test_nm.sh: The file was not recognized as a valid object file
 
 ./ft_nm: tests/test_otool.sh: The file was not recognized as a valid object file

@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:16:56 by opus1io           #+#    #+#             */
-/*   Updated: 2019/04/18 18:39:47 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/04/19 18:13:20 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,17 @@ static t_list	*ft_get_syminfos(struct nlist_64 symcmd, char *str, char *sect, \
 	infos.value = (is_64) ? symcmd.n_value : (uint32_t)(symcmd.n_value);
 	infos.str = str;
 	infos.ext = symcmd.n_type & N_EXT;
-	if (symcmd.n_type & N_SECT)
+	if ((symcmd.n_type & N_TYPE) == N_SECT)
 	{
 		if (symcmd.n_sect > 0 && symcmd.n_sect <= ft_strlen(sect) + 1)
 			infos.letter = sect[symcmd.n_sect - 1];
 		else
 			return (NULL);
 	}
-	if (!infos.letter)
+	if ((symcmd.n_type & N_TYPE) == N_UNDF)
 		infos.letter = 'U';
+	if ((symcmd.n_type & N_TYPE) == N_ABS)
+		infos.letter = 'A';
 	ret = ft_lstnew(&infos, sizeof(infos));
 	return (ret);
 }

@@ -6,7 +6,7 @@
 #    By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 13:21:18 by jplevy            #+#    #+#              #
-#    Updated: 2019/04/17 17:20:54 by opus1io          ###   ########.fr        #
+#    Updated: 2019/04/19 18:47:18 by opus1io          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,9 @@ NM_SRC_NAME = ft_nm.c \
 			symbols.c \
 			sections.c \
 			main.c \
-			merge_sort.c
+			merge_sort.c \
+			ft_swap.c \
+			arch_fat.c
 NM_OBJ_NAME = $(NM_SRC_NAME:.c=.o)
 NM_OBJ_C = $(addprefix $(OBJ_PATH), $(NM_OBJ_NAME))
 NM_OBJ = $(addprefix $(NM_PATH), $(NM_OBJ_C))

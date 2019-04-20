@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:14:50 by opus1io           #+#    #+#             */
-/*   Updated: 2019/04/18 18:29:29 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/04/19 18:38:54 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ static char		get_section_letter(char *sectname)
 		return ('D');
 	if (ft_strcmp(sectname, SECT_BSS) == 0)
 		return ('B');
-	if (ft_strcmp(sectname, SECT_COMMON) == 0)
-		return ('C');
 	return ('S');
 }
 

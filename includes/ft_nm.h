@@ -6,7 +6,7 @@
 /*   By: opus1io <opus1io@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 18:28:54 by jplevy            #+#    #+#             */
-/*   Updated: 2019/04/18 17:33:56 by opus1io          ###   ########.fr       */
+/*   Updated: 2019/04/19 18:46:10 by opus1io          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,23 @@ typedef struct	s_boolinfo{
 	bool		is_swap;
 }				t_boolinfo;
 
+
+/*
+**	ft_swap.c
+*/
+uint32_t	swap_int32(uint32_t data);
+uint64_t	swap_int64(uint64_t data);
+uint32_t	get_int32_value(uint32_t data, bool is_swap);
+uint64_t	get_int64_value(uint64_t data, bool is_swap);
+
+/*
+**	arch_fat.c
+**
+** static char			*ft_archive_str(char *file, char *arch);
+*/
+
+void	ft_parse_archive(void *ptr, size_t fsize, t_flags *flags, char *file);
+void	ft_parse_fat(void *ptr, t_boolinfo info, t_flags *flags, char *file);
 
 /*
 **	merge_sort.c
